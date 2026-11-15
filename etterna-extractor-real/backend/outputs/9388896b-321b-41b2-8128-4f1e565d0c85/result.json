@@ -1,0 +1,294 @@
+{
+  "status": "extracted",
+  "source": "screen",
+  "layout": "etterna_supplied_theme_v1",
+  "alignment": "screen",
+  "data": {
+    "accuracy_percent": {
+      "value": 96.91,
+      "raw": "96.91% (Wife) IN",
+      "ocr_confidence": 94.7
+    },
+    "accuracy_label": {
+      "value": "96.91% (Wife) IN",
+      "raw": "96.91% (Wife) IN",
+      "ocr_confidence": 94.7
+    },
+    "judgments": {
+      "marvelous": {
+        "value": 1255,
+        "raw": "Marvelous 1255 crass",
+        "ocr_confidence": 63.3
+      },
+      "perfect": {
+        "value": 398,
+        "raw": "Perfect 398 tase",
+        "ocr_confidence": 70.3
+      },
+      "great": {
+        "value": 53,
+        "raw": "| Great 53 13.09%)",
+        "ocr_confidence": 70.8
+      },
+      "good": {
+        "value": 4,
+        "raw": "Good 4 (0.23%)",
+        "ocr_confidence": 81.0
+      },
+      "bad": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "miss": {
+        "value": 4,
+        "raw": "Miss 4 10-23%",
+        "ocr_confidence": 78.7
+      }
+    },
+    "timing": {
+      "mean_absolute_ms": {
+        "value": 13.71,
+        "raw": "Mean(Abs) 13.71ms",
+        "ocr_confidence": 64.5
+      },
+      "mean_ms": {
+        "value": -2.9,
+        "raw": "Mean -2.90ms",
+        "ocr_confidence": 87.0
+      },
+      "standard_deviation_ms": {
+        "value": 17.62,
+        "raw": "Sd 17.62ms",
+        "ocr_confidence": 91.0
+      },
+      "smallest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "largest_ms": {
+        "value": -110.1,
+        "raw": "Largest -110.10ms",
+        "ocr_confidence": 61.0
+      },
+      "left_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "right_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "playback_rate": {
+      "value": 1.2,
+      "raw": "1.2x",
+      "ocr_confidence": 79.0
+    },
+    "judge_setting": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "auxiliary_counts": {
+      "holds": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "Holds 000/000",
+        "ocr_confidence": 94.0
+      },
+      "mines": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "Mines 000/000",
+        "ocr_confidence": 94.0
+      },
+      "rolls": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "Rolls 000/000",
+        "ocr_confidence": 73.0
+      },
+      "lifts": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "Lifts 000/000",
+        "ocr_confidence": 96.0
+      },
+      "fakes": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "Fakes 000/000",
+        "ocr_confidence": 94.0
+      }
+    },
+    "song_text": "Cutie Puffs // Truongasm 7\n1.2x",
+    "unlabeled_ratings_text": []
+  },
+  "ocr": {
+    "results": {
+      "text": "96.91% (Wife) IN\nC1135, 50% Mini, Overhead, Dividebyzero\n| Great 53 13.09%)\nGood 4 (0.23%)\nBad Q 0.09%)\nMiss 4 10-23%\nChord Cohesion: No",
+      "lines": [
+        {
+          "text": "96.91% (Wife) IN",
+          "ocr_confidence": 94.7
+        },
+        {
+          "text": "C1135, 50% Mini, Overhead, Dividebyzero",
+          "ocr_confidence": 91.8
+        },
+        {
+          "text": "| Great 53 13.09%)",
+          "ocr_confidence": 70.8
+        },
+        {
+          "text": "Good 4 (0.23%)",
+          "ocr_confidence": 81.0
+        },
+        {
+          "text": "Bad Q 0.09%)",
+          "ocr_confidence": 59.7
+        },
+        {
+          "text": "Miss 4 10-23%",
+          "ocr_confidence": 78.7
+        },
+        {
+          "text": "Chord Cohesion: No",
+          "ocr_confidence": 96.0
+        }
+      ]
+    },
+    "timing_stats": {
+      "text": "Mean -2.90ms\nMean(Abs) 13.71ms\nSd 17.62ms\nSmallest -0.01lms\nLargest -110.10ms",
+      "lines": [
+        {
+          "text": "Mean -2.90ms",
+          "ocr_confidence": 87.0
+        },
+        {
+          "text": "Mean(Abs) 13.71ms",
+          "ocr_confidence": 64.5
+        },
+        {
+          "text": "Sd 17.62ms",
+          "ocr_confidence": 91.0
+        },
+        {
+          "text": "Smallest -0.01lms",
+          "ocr_confidence": 55.5
+        },
+        {
+          "text": "Largest -110.10ms",
+          "ocr_confidence": 61.0
+        }
+      ]
+    },
+    "auxiliary_counts": {
+      "text": "Holds 000/000\nMines 000/000\nRolls 000/000\nLifts 000/000\nFakes 000/000",
+      "lines": [
+        {
+          "text": "Holds 000/000",
+          "ocr_confidence": 94.0
+        },
+        {
+          "text": "Mines 000/000",
+          "ocr_confidence": 94.0
+        },
+        {
+          "text": "Rolls 000/000",
+          "ocr_confidence": 73.0
+        },
+        {
+          "text": "Lifts 000/000",
+          "ocr_confidence": 96.0
+        },
+        {
+          "text": "Fakes 000/000",
+          "ocr_confidence": 94.0
+        }
+      ]
+    },
+    "song_and_rate": {
+      "text": "Cutie Puffs // Truongasm 7\n1.2x",
+      "lines": [
+        {
+          "text": "Cutie Puffs // Truongasm 7",
+          "ocr_confidence": 65.8
+        },
+        {
+          "text": "1.2x",
+          "ocr_confidence": 79.0
+        }
+      ]
+    },
+    "footer": {
+      "text": "ives Etienne: 34.63 0.58.0}\n, 6381 Plays Songs Loaded: 6997 |\n12899794 Arrows Smashed Songs Favorited: 0\n\u00a5# 364:20:20 PlavTime Jude: 5 Session Time: 03:17:14 Not logecd in 2018-06-26 17:33:12",
+      "lines": [
+        {
+          "text": "ives Etienne: 34.63 0.58.0}",
+          "ocr_confidence": 67.8
+        },
+        {
+          "text": ", 6381 Plays Songs Loaded: 6997 |",
+          "ocr_confidence": 81.3
+        },
+        {
+          "text": "12899794 Arrows Smashed Songs Favorited: 0",
+          "ocr_confidence": 95.5
+        },
+        {
+          "text": "\u00a5# 364:20:20 PlavTime Jude: 5 Session Time: 03:17:14 Not logecd in 2018-06-26 17:33:12",
+          "ocr_confidence": 80.5
+        }
+      ]
+    },
+    "judgment_rows": {
+      "text": "Marvelous 1255 crass\nPerfect 398 tase",
+      "lines": [
+        {
+          "text": "Marvelous 1255 crass",
+          "ocr_confidence": 63.3
+        },
+        {
+          "text": "Perfect 398 tase",
+          "ocr_confidence": 70.3
+        }
+      ]
+    }
+  },
+  "crops": {
+    "results": "results.png",
+    "timing_stats": "timing_stats.png",
+    "auxiliary_counts": "auxiliary_counts.png",
+    "offset_graph": "offset_graph.png",
+    "song_and_rate": "song_and_rate.png",
+    "footer": "footer.png"
+  },
+  "graph": {
+    "image": "offset_graph.png",
+    "events": null,
+    "time_axis": "uncalibrated",
+    "offset_scale": "not_digitized"
+  },
+  "warnings": [
+    "OCR output requires review; confidence scores are not calibrated probabilities.",
+    "Graph is an image crop, not reconstructed replay data. No exact event timestamps extracted.",
+    "Unreadable judgment count: bad."
+  ],
+  "job_id": "9388896b-321b-41b2-8128-4f1e565d0c85",
+  "review_path": "/?job=9388896b-321b-41b2-8128-4f1e565d0c85"
+}

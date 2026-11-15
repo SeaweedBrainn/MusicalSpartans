@@ -1,0 +1,11 @@
+{
+  "name": "etterna_supplied_theme_v1",
+  "regions": {
+    "results": [0.02, 0.28, 0.355, 0.76],
+    "timing_stats": [0.18, 0.77, 0.355, 0.90],
+    "auxiliary_counts": [0.02, 0.77, 0.17, 0.90],
+    "offset_graph": [0.357, 0.62, 0.995, 0.90],
+    "song_and_rate": [0.38, 0.26, 0.70, 0.32],
+    "footer": [0.0, 0.90, 1.0, 1.0]
+  }
+}

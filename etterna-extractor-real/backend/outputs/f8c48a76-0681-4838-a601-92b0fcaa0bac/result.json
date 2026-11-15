@@ -1,0 +1,9 @@
+{
+  "status": "needs_corners",
+  "source": "screen",
+  "warnings": [
+    "Could not align a supported Etterna screen. Select its four screen corners inside the miniapp."
+  ],
+  "job_id": "f8c48a76-0681-4838-a601-92b0fcaa0bac",
+  "review_path": "/?job=f8c48a76-0681-4838-a601-92b0fcaa0bac"
+}

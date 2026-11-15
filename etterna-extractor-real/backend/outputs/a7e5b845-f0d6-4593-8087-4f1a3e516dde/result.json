@@ -1,0 +1,15 @@
+{
+  "status": "session_error",
+  "source": "game_session",
+  "remote_session": {
+    "handle": "5e47702eb9f142948b070baf4fbecf11",
+    "runs": [],
+    "run_count": 0
+  },
+  "warnings": [
+    "Session key is invalid or the session no longer exists."
+  ],
+  "crops": {},
+  "job_id": "a7e5b845-f0d6-4593-8087-4f1a3e516dde",
+  "review_path": "/?job=a7e5b845-f0d6-4593-8087-4f1a3e516dde"
+}

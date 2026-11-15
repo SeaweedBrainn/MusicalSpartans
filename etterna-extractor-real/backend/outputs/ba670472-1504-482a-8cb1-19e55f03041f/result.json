@@ -1,0 +1,1870 @@
+{
+  "status": "partial",
+  "source": "screen",
+  "layout": "etterna_4k_results_v2",
+  "alignment": "auto_game_content",
+  "alignment_details": {
+    "algorithm": "SIFT_RANSAC_content_registration",
+    "matching_mode": "appearance_assisted",
+    "inliers": 159,
+    "candidate_matches": 271,
+    "reference_spatial_coverage": 0.561,
+    "median_reprojection_error_scaled_px": 0.6,
+    "reference_used_for": "geometry_only_not_result_values",
+    "resampling": "perspective_corrected",
+    "visible_game_fraction": 1.0,
+    "game_corners_in_photo_normalized": [
+      [
+        0.19039,
+        0.27092
+      ],
+      [
+        0.63896,
+        0.1926
+      ],
+      [
+        0.62938,
+        0.56463
+      ],
+      [
+        0.26146,
+        0.64326
+      ]
+    ]
+  },
+  "data": {
+    "accuracy_percent": {
+      "value": 87.57,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 73.0
+    },
+    "accuracy_label": {
+      "value": "87.57% [W3 J4]",
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 73.0
+    },
+    "judgments": {
+      "marvelous": {
+        "value": 679,
+        "raw": "679",
+        "ocr_confidence": 98.0,
+        "engine": "rapidocr",
+        "method": "gray",
+        "candidates": [
+          {
+            "text": "679",
+            "ocr_confidence": 95.7,
+            "variant": "color"
+          },
+          {
+            "text": "679",
+            "ocr_confidence": 98.0,
+            "variant": "gray"
+          }
+        ]
+      },
+      "perfect": {
+        "value": 537,
+        "raw": "537",
+        "ocr_confidence": 99.2,
+        "engine": "rapidocr",
+        "method": "gray",
+        "candidates": [
+          {
+            "text": "537",
+            "ocr_confidence": 99.1,
+            "variant": "color"
+          },
+          {
+            "text": "537",
+            "ocr_confidence": 99.2,
+            "variant": "gray"
+          }
+        ]
+      },
+      "great": {
+        "value": 215,
+        "raw": "215",
+        "ocr_confidence": 99.9,
+        "engine": "rapidocr",
+        "method": "color",
+        "candidates": [
+          {
+            "text": "215",
+            "ocr_confidence": 99.9,
+            "variant": "color"
+          },
+          {
+            "text": "215",
+            "ocr_confidence": 99.9,
+            "variant": "gray"
+          }
+        ]
+      },
+      "good": {
+        "value": 1,
+        "raw": "1",
+        "ocr_confidence": 99.8,
+        "engine": "rapidocr",
+        "method": "color",
+        "candidates": [
+          {
+            "text": "1",
+            "ocr_confidence": 99.8,
+            "variant": "color"
+          },
+          {
+            "text": "1",
+            "ocr_confidence": 99.8,
+            "variant": "gray"
+          },
+          {
+            "text": "111",
+            "ocr_confidence": 99.3,
+            "variant": "repeat_color"
+          },
+          {
+            "text": "111",
+            "ocr_confidence": 99.6,
+            "variant": "repeat_gray"
+          }
+        ]
+      },
+      "bad": {
+        "value": 1,
+        "raw": "1",
+        "ocr_confidence": 99.7,
+        "engine": "rapidocr",
+        "method": "color",
+        "candidates": [
+          {
+            "text": "1",
+            "ocr_confidence": 99.7,
+            "variant": "color"
+          },
+          {
+            "text": "1",
+            "ocr_confidence": 99.7,
+            "variant": "gray"
+          },
+          {
+            "text": "111",
+            "ocr_confidence": 82.6,
+            "variant": "repeat_color"
+          },
+          {
+            "text": "111",
+            "ocr_confidence": 99.0,
+            "variant": "repeat_gray"
+          }
+        ]
+      },
+      "miss": {
+        "value": 1,
+        "raw": "1",
+        "ocr_confidence": 99.6,
+        "engine": "rapidocr",
+        "method": "gray",
+        "candidates": [
+          {
+            "text": "1",
+            "ocr_confidence": 99.4,
+            "variant": "color"
+          },
+          {
+            "text": "1",
+            "ocr_confidence": 99.6,
+            "variant": "gray"
+          },
+          {
+            "text": "111",
+            "ocr_confidence": 98.4,
+            "variant": "repeat_color"
+          },
+          {
+            "text": "111",
+            "ocr_confidence": 98.9,
+            "variant": "repeat_gray"
+          }
+        ]
+      }
+    },
+    "timing": {
+      "mean_ms": {
+        "value": 23.37,
+        "raw": "Meon23.37ms",
+        "ocr_confidence": 86.2,
+        "engine": "rapidocr"
+      },
+      "standard_deviation_ms": {
+        "value": 21.75,
+        "raw": "Sd21.75m",
+        "ocr_confidence": 76.4,
+        "engine": "rapidocr"
+      },
+      "largest_ms": {
+        "value": -164.57,
+        "raw": "Lorgott-164.57m",
+        "ocr_confidence": 86.4,
+        "engine": "rapidocr"
+      },
+      "left_cbs": {
+        "value": 3,
+        "raw": "333",
+        "ocr_confidence": 99.6,
+        "engine": "rapidocr",
+        "method": "repeat_color",
+        "candidates": [
+          {
+            "text": "3",
+            "ocr_confidence": 98.5,
+            "variant": "color"
+          },
+          {
+            "text": "3",
+            "ocr_confidence": 98.5,
+            "variant": "gray"
+          },
+          {
+            "text": "333",
+            "ocr_confidence": 99.6,
+            "variant": "repeat_color"
+          },
+          {
+            "text": "333",
+            "ocr_confidence": 99.6,
+            "variant": "repeat_gray"
+          }
+        ]
+      },
+      "right_cbs": {
+        "value": 0,
+        "raw": "000",
+        "ocr_confidence": 89.2,
+        "engine": "rapidocr",
+        "method": "repeat_gray",
+        "candidates": [
+          {
+            "text": "0",
+            "ocr_confidence": 41.6,
+            "variant": "color"
+          },
+          {
+            "text": "0",
+            "ocr_confidence": 48.3,
+            "variant": "gray"
+          },
+          {
+            "text": "000",
+            "ocr_confidence": 87.4,
+            "variant": "repeat_color"
+          },
+          {
+            "text": "000",
+            "ocr_confidence": 89.2,
+            "variant": "repeat_gray"
+          }
+        ]
+      }
+    },
+    "playback_rate": {
+      "value": 1.0,
+      "raw": "1x",
+      "ocr_confidence": 72.0
+    },
+    "judge_setting": {
+      "value": 4,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 73.0
+    },
+    "auxiliary_counts": {
+      "holds": {
+        "value": {
+          "first": 2,
+          "second": 2
+        },
+        "raw": "2 / 2",
+        "ocr_confidence": 99.3,
+        "engine": "rapidocr",
+        "method": "separate_pair_cells",
+        "candidates": [
+          {
+            "value": 2,
+            "raw": "2",
+            "ocr_confidence": 99.3,
+            "engine": "rapidocr",
+            "method": "gray",
+            "candidates": [
+              {
+                "text": "2",
+                "ocr_confidence": 99.0,
+                "variant": "color"
+              },
+              {
+                "text": "2",
+                "ocr_confidence": 99.3,
+                "variant": "gray"
+              },
+              {
+                "text": "2.2.2",
+                "ocr_confidence": 82.9,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "2.2.2",
+                "ocr_confidence": 92.4,
+                "variant": "repeat_gray"
+              }
+            ]
+          },
+          {
+            "value": 2,
+            "raw": "2",
+            "ocr_confidence": 99.5,
+            "engine": "rapidocr",
+            "method": "color",
+            "candidates": [
+              {
+                "text": "2",
+                "ocr_confidence": 99.5,
+                "variant": "color"
+              },
+              {
+                "text": "2",
+                "ocr_confidence": 99.4,
+                "variant": "gray"
+              },
+              {
+                "text": "222",
+                "ocr_confidence": 99.4,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "222",
+                "ocr_confidence": 99.3,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      },
+      "mines": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "000 / 000",
+        "ocr_confidence": 68.2,
+        "engine": "rapidocr",
+        "method": "separate_pair_cells",
+        "candidates": [
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 93.2,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "o",
+                "ocr_confidence": 23.8,
+                "variant": "color"
+              },
+              {
+                "text": "0",
+                "ocr_confidence": 28.4,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 92.6,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 93.2,
+                "variant": "repeat_gray"
+              }
+            ]
+          },
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 68.2,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "8",
+                "ocr_confidence": 16.6,
+                "variant": "color"
+              },
+              {
+                "text": "6",
+                "ocr_confidence": 15.0,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 58.5,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 68.2,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      },
+      "rolls": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "000 / 000",
+        "ocr_confidence": 90.9,
+        "engine": "rapidocr",
+        "method": "separate_pair_cells",
+        "candidates": [
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 93.6,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "0",
+                "ocr_confidence": 78.1,
+                "variant": "color"
+              },
+              {
+                "text": "0",
+                "ocr_confidence": 83.5,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 93.3,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 93.6,
+                "variant": "repeat_gray"
+              }
+            ]
+          },
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 90.9,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "6",
+                "ocr_confidence": 32.7,
+                "variant": "color"
+              },
+              {
+                "text": "6",
+                "ocr_confidence": 21.9,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 86.2,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 90.9,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      },
+      "lifts": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "000 / 000",
+        "ocr_confidence": 76.0,
+        "engine": "rapidocr",
+        "method": "separate_pair_cells",
+        "candidates": [
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 76.0,
+            "engine": "rapidocr",
+            "method": "repeat_color",
+            "candidates": [
+              {
+                "text": "0",
+                "ocr_confidence": 27.9,
+                "variant": "color"
+              },
+              {
+                "text": "0",
+                "ocr_confidence": 35.3,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 76.0,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 71.2,
+                "variant": "repeat_gray"
+              }
+            ]
+          },
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 92.5,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "0",
+                "ocr_confidence": 21.6,
+                "variant": "color"
+              },
+              {
+                "text": "D",
+                "ocr_confidence": 37.3,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 88.1,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 92.5,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      },
+      "fakes": {
+        "value": {
+          "first": 0,
+          "second": 0
+        },
+        "raw": "000 / 000",
+        "ocr_confidence": 85.5,
+        "engine": "rapidocr",
+        "method": "separate_pair_cells",
+        "candidates": [
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 85.5,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "0",
+                "ocr_confidence": 46.1,
+                "variant": "color"
+              },
+              {
+                "text": "0",
+                "ocr_confidence": 47.4,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 82.1,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 85.5,
+                "variant": "repeat_gray"
+              }
+            ]
+          },
+          {
+            "value": 0,
+            "raw": "000",
+            "ocr_confidence": 96.9,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "0",
+                "ocr_confidence": 52.9,
+                "variant": "color"
+              },
+              {
+                "text": "0",
+                "ocr_confidence": 47.9,
+                "variant": "gray"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 95.5,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "000",
+                "ocr_confidence": 96.9,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "song_text": "Hatsune Miku no Gekishou\ncosMo\nhi19hi19 Pack 5 - Streams and Memes\n1x",
+    "unlabeled_ratings_text": [
+      "16.92 ~ 14.32 HD"
+    ],
+    "grade": {
+      "value": "A",
+      "raw": "A",
+      "ocr_confidence": 94.0
+    },
+    "wife_version": {
+      "value": 3,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 73.0
+    },
+    "ratios_and_streaks": {
+      "ra": {
+        "value": "1.1:1",
+        "raw": "1.1 : 111",
+        "ocr_confidence": 96.9,
+        "engine": "rapidocr",
+        "method": "separate_ratio_cells",
+        "candidates": [
+          {
+            "value": 1.1,
+            "raw": "1.1",
+            "ocr_confidence": 96.9,
+            "engine": "rapidocr",
+            "method": "color",
+            "candidates": [
+              {
+                "text": "1.1",
+                "ocr_confidence": 96.9,
+                "variant": "color"
+              },
+              {
+                "text": "1.1",
+                "ocr_confidence": 96.1,
+                "variant": "gray"
+              }
+            ]
+          },
+          {
+            "value": 1,
+            "raw": "111",
+            "ocr_confidence": 99.7,
+            "engine": "rapidocr",
+            "method": "repeat_gray",
+            "candidates": [
+              {
+                "text": "1",
+                "ocr_confidence": 99.6,
+                "variant": "color"
+              },
+              {
+                "text": "1",
+                "ocr_confidence": 99.6,
+                "variant": "gray"
+              },
+              {
+                "text": "111",
+                "ocr_confidence": 99.1,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "111",
+                "ocr_confidence": 99.7,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      },
+      "ma": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null,
+        "engine": "rapidocr",
+        "candidates": [
+          {
+            "value": null,
+            "raw": null,
+            "ocr_confidence": null,
+            "engine": "rapidocr",
+            "candidates": [
+              {
+                "text": "1.3",
+                "ocr_confidence": 79.0,
+                "variant": "color"
+              },
+              {
+                "text": "1.3",
+                "ocr_confidence": 83.0,
+                "variant": "gray"
+              }
+            ]
+          },
+          {
+            "value": 1,
+            "raw": "1",
+            "ocr_confidence": 94.4,
+            "engine": "rapidocr",
+            "method": "gray",
+            "candidates": [
+              {
+                "text": "21",
+                "ocr_confidence": 60.2,
+                "variant": "color"
+              },
+              {
+                "text": "1",
+                "ocr_confidence": 94.4,
+                "variant": "gray"
+              },
+              {
+                "text": "211",
+                "ocr_confidence": 40.1,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "21:1:1",
+                "ocr_confidence": 34.7,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      },
+      "pa": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null,
+        "engine": "rapidocr",
+        "candidates": [
+          {
+            "value": 2.5,
+            "raw": "2.5",
+            "ocr_confidence": 97.9,
+            "engine": "rapidocr",
+            "method": "color",
+            "candidates": [
+              {
+                "text": "2.5",
+                "ocr_confidence": 97.9,
+                "variant": "color"
+              },
+              {
+                "text": "2.5",
+                "ocr_confidence": 97.6,
+                "variant": "gray"
+              }
+            ]
+          },
+          {
+            "value": null,
+            "raw": null,
+            "ocr_confidence": null,
+            "engine": "rapidocr",
+            "candidates": [
+              {
+                "text": "1",
+                "ocr_confidence": 70.7,
+                "variant": "color"
+              },
+              {
+                "text": "1",
+                "ocr_confidence": 56.1,
+                "variant": "gray"
+              },
+              {
+                "text": "",
+                "ocr_confidence": 0.0,
+                "variant": "repeat_color"
+              },
+              {
+                "text": "11",
+                "ocr_confidence": 27.4,
+                "variant": "repeat_gray"
+              }
+            ]
+          }
+        ]
+      },
+      "longest_mfc": {
+        "value": 18,
+        "raw": "18",
+        "ocr_confidence": 93.1,
+        "engine": "rapidocr",
+        "method": "color",
+        "candidates": [
+          {
+            "text": "18",
+            "ocr_confidence": 93.1,
+            "variant": "color"
+          },
+          {
+            "text": "18",
+            "ocr_confidence": 91.8,
+            "variant": "gray"
+          }
+        ]
+      },
+      "longest_pfc": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null,
+        "engine": "rapidocr",
+        "candidates": [
+          {
+            "text": "53",
+            "ocr_confidence": 77.4,
+            "variant": "color"
+          },
+          {
+            "text": "53",
+            "ocr_confidence": 77.2,
+            "variant": "gray"
+          }
+        ]
+      }
+    }
+  },
+  "ocr": {
+    "results": {
+      "text": "Medio BTR\naaa 8 83} \u00a7\u00ab- Baw\nMiss 107m",
+      "lines": [
+        {
+          "text": "Medio BTR",
+          "ocr_confidence": 21.0
+        },
+        {
+          "text": "aaa 8 83} \u00a7\u00ab- Baw",
+          "ocr_confidence": 38.4
+        },
+        {
+          "text": "Miss 107m",
+          "ocr_confidence": 70.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "accuracy": {
+      "text": "87.57% [W3 J4]",
+      "lines": [
+        {
+          "text": "87.57% [W3 J4]",
+          "ocr_confidence": 73.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "grade": {
+      "text": "A",
+      "lines": [
+        {
+          "text": "A",
+          "ocr_confidence": 94.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "ratings": {
+      "text": "16.92 ~ 14.32 HD",
+      "lines": [
+        {
+          "text": "16.92 ~ 14.32 HD",
+          "ocr_confidence": 92.2
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "timing_stats": {
+      "text": "Mean 23.37ms\nSd 21,.75me8\nLoergest -164.57me\nLoh C@s 3\nRight Cis \u00b0",
+      "lines": [
+        {
+          "text": "Mean 23.37ms",
+          "ocr_confidence": 87.5
+        },
+        {
+          "text": "Sd 21,.75me8",
+          "ocr_confidence": 48.5
+        },
+        {
+          "text": "Loergest -164.57me",
+          "ocr_confidence": 42.0
+        },
+        {
+          "text": "Loh C@s 3",
+          "ocr_confidence": 48.7
+        },
+        {
+          "text": "Right Cis \u00b0",
+          "ocr_confidence": 53.7
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "auxiliary_counts": {
+      "text": "Hales 2/2\nbuon o/ 8\nRowe ov \u00b0o\nwits o 9\u00b0\ntahes o 0",
+      "lines": [
+        {
+          "text": "Hales 2/2",
+          "ocr_confidence": 16.5
+        },
+        {
+          "text": "buon o/ 8",
+          "ocr_confidence": 40.0
+        },
+        {
+          "text": "Rowe ov \u00b0o",
+          "ocr_confidence": 40.0
+        },
+        {
+          "text": "wits o 9\u00b0",
+          "ocr_confidence": 49.7
+        },
+        {
+          "text": "tahes o 0",
+          "ocr_confidence": 33.7
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "ratios_and_streaks": {
+      "text": "RA 1.01\nMA: 13:1\nLongest SPO:\nTt)\nLongest PFC: \u00a73",
+      "lines": [
+        {
+          "text": "RA 1.01",
+          "ocr_confidence": 53.0
+        },
+        {
+          "text": "MA: 13:1",
+          "ocr_confidence": 47.0
+        },
+        {
+          "text": "Longest SPO:",
+          "ocr_confidence": 20.5
+        },
+        {
+          "text": "Tt)",
+          "ocr_confidence": 31.0
+        },
+        {
+          "text": "Longest PFC: \u00a73",
+          "ocr_confidence": 68.7
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "song_and_rate": {
+      "text": "Hatsune Miku no Gekishou\ncosMo\nhi19hi19 Pack 5 - Streams and Memes\n1x",
+      "lines": [
+        {
+          "text": "Hatsune Miku no Gekishou",
+          "ocr_confidence": 93.5
+        },
+        {
+          "text": "cosMo",
+          "ocr_confidence": 90.0
+        },
+        {
+          "text": "hi19hi19 Pack 5 - Streams and Memes",
+          "ocr_confidence": 87.9
+        },
+        {
+          "text": "1x",
+          "ocr_confidence": 72.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "options": {
+      "text": "C962, 30% Mini, Reverse, Overhead, Aggro_baal2-",
+      "lines": [
+        {
+          "text": "C962, 30% Mini, Reverse, Overhead, Aggro_baal2-",
+          "ocr_confidence": 78.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "fixed_fields": {
+      "judgments": {
+        "marvelous": {
+          "value": 679,
+          "raw": "679",
+          "ocr_confidence": 98.0,
+          "engine": "rapidocr",
+          "method": "gray",
+          "candidates": [
+            {
+              "text": "679",
+              "ocr_confidence": 95.7,
+              "variant": "color"
+            },
+            {
+              "text": "679",
+              "ocr_confidence": 98.0,
+              "variant": "gray"
+            }
+          ]
+        },
+        "perfect": {
+          "value": 537,
+          "raw": "537",
+          "ocr_confidence": 99.2,
+          "engine": "rapidocr",
+          "method": "gray",
+          "candidates": [
+            {
+              "text": "537",
+              "ocr_confidence": 99.1,
+              "variant": "color"
+            },
+            {
+              "text": "537",
+              "ocr_confidence": 99.2,
+              "variant": "gray"
+            }
+          ]
+        },
+        "great": {
+          "value": 215,
+          "raw": "215",
+          "ocr_confidence": 99.9,
+          "engine": "rapidocr",
+          "method": "color",
+          "candidates": [
+            {
+              "text": "215",
+              "ocr_confidence": 99.9,
+              "variant": "color"
+            },
+            {
+              "text": "215",
+              "ocr_confidence": 99.9,
+              "variant": "gray"
+            }
+          ]
+        },
+        "good": {
+          "value": 1,
+          "raw": "1",
+          "ocr_confidence": 99.8,
+          "engine": "rapidocr",
+          "method": "color",
+          "candidates": [
+            {
+              "text": "1",
+              "ocr_confidence": 99.8,
+              "variant": "color"
+            },
+            {
+              "text": "1",
+              "ocr_confidence": 99.8,
+              "variant": "gray"
+            },
+            {
+              "text": "111",
+              "ocr_confidence": 99.3,
+              "variant": "repeat_color"
+            },
+            {
+              "text": "111",
+              "ocr_confidence": 99.6,
+              "variant": "repeat_gray"
+            }
+          ]
+        },
+        "bad": {
+          "value": 1,
+          "raw": "1",
+          "ocr_confidence": 99.7,
+          "engine": "rapidocr",
+          "method": "color",
+          "candidates": [
+            {
+              "text": "1",
+              "ocr_confidence": 99.7,
+              "variant": "color"
+            },
+            {
+              "text": "1",
+              "ocr_confidence": 99.7,
+              "variant": "gray"
+            },
+            {
+              "text": "111",
+              "ocr_confidence": 82.6,
+              "variant": "repeat_color"
+            },
+            {
+              "text": "111",
+              "ocr_confidence": 99.0,
+              "variant": "repeat_gray"
+            }
+          ]
+        },
+        "miss": {
+          "value": 1,
+          "raw": "1",
+          "ocr_confidence": 99.6,
+          "engine": "rapidocr",
+          "method": "gray",
+          "candidates": [
+            {
+              "text": "1",
+              "ocr_confidence": 99.4,
+              "variant": "color"
+            },
+            {
+              "text": "1",
+              "ocr_confidence": 99.6,
+              "variant": "gray"
+            },
+            {
+              "text": "111",
+              "ocr_confidence": 98.4,
+              "variant": "repeat_color"
+            },
+            {
+              "text": "111",
+              "ocr_confidence": 98.9,
+              "variant": "repeat_gray"
+            }
+          ]
+        }
+      },
+      "timing": {
+        "mean_ms": {
+          "value": 23.37,
+          "raw": "Meon23.37ms",
+          "ocr_confidence": 86.2,
+          "engine": "rapidocr"
+        },
+        "standard_deviation_ms": {
+          "value": 21.75,
+          "raw": "Sd21.75m",
+          "ocr_confidence": 76.4,
+          "engine": "rapidocr"
+        },
+        "largest_ms": {
+          "value": -164.57,
+          "raw": "Lorgott-164.57m",
+          "ocr_confidence": 86.4,
+          "engine": "rapidocr"
+        },
+        "left_cbs": {
+          "value": 3,
+          "raw": "333",
+          "ocr_confidence": 99.6,
+          "engine": "rapidocr",
+          "method": "repeat_color",
+          "candidates": [
+            {
+              "text": "3",
+              "ocr_confidence": 98.5,
+              "variant": "color"
+            },
+            {
+              "text": "3",
+              "ocr_confidence": 98.5,
+              "variant": "gray"
+            },
+            {
+              "text": "333",
+              "ocr_confidence": 99.6,
+              "variant": "repeat_color"
+            },
+            {
+              "text": "333",
+              "ocr_confidence": 99.6,
+              "variant": "repeat_gray"
+            }
+          ]
+        },
+        "right_cbs": {
+          "value": 0,
+          "raw": "000",
+          "ocr_confidence": 89.2,
+          "engine": "rapidocr",
+          "method": "repeat_gray",
+          "candidates": [
+            {
+              "text": "0",
+              "ocr_confidence": 41.6,
+              "variant": "color"
+            },
+            {
+              "text": "0",
+              "ocr_confidence": 48.3,
+              "variant": "gray"
+            },
+            {
+              "text": "000",
+              "ocr_confidence": 87.4,
+              "variant": "repeat_color"
+            },
+            {
+              "text": "000",
+              "ocr_confidence": 89.2,
+              "variant": "repeat_gray"
+            }
+          ]
+        }
+      },
+      "auxiliary_counts": {
+        "holds": {
+          "value": {
+            "first": 2,
+            "second": 2
+          },
+          "raw": "2 / 2",
+          "ocr_confidence": 99.3,
+          "engine": "rapidocr",
+          "method": "separate_pair_cells",
+          "candidates": [
+            {
+              "value": 2,
+              "raw": "2",
+              "ocr_confidence": 99.3,
+              "engine": "rapidocr",
+              "method": "gray",
+              "candidates": [
+                {
+                  "text": "2",
+                  "ocr_confidence": 99.0,
+                  "variant": "color"
+                },
+                {
+                  "text": "2",
+                  "ocr_confidence": 99.3,
+                  "variant": "gray"
+                },
+                {
+                  "text": "2.2.2",
+                  "ocr_confidence": 82.9,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "2.2.2",
+                  "ocr_confidence": 92.4,
+                  "variant": "repeat_gray"
+                }
+              ]
+            },
+            {
+              "value": 2,
+              "raw": "2",
+              "ocr_confidence": 99.5,
+              "engine": "rapidocr",
+              "method": "color",
+              "candidates": [
+                {
+                  "text": "2",
+                  "ocr_confidence": 99.5,
+                  "variant": "color"
+                },
+                {
+                  "text": "2",
+                  "ocr_confidence": 99.4,
+                  "variant": "gray"
+                },
+                {
+                  "text": "222",
+                  "ocr_confidence": 99.4,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "222",
+                  "ocr_confidence": 99.3,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        },
+        "mines": {
+          "value": {
+            "first": 0,
+            "second": 0
+          },
+          "raw": "000 / 000",
+          "ocr_confidence": 68.2,
+          "engine": "rapidocr",
+          "method": "separate_pair_cells",
+          "candidates": [
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 93.2,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "o",
+                  "ocr_confidence": 23.8,
+                  "variant": "color"
+                },
+                {
+                  "text": "0",
+                  "ocr_confidence": 28.4,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 92.6,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 93.2,
+                  "variant": "repeat_gray"
+                }
+              ]
+            },
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 68.2,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "8",
+                  "ocr_confidence": 16.6,
+                  "variant": "color"
+                },
+                {
+                  "text": "6",
+                  "ocr_confidence": 15.0,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 58.5,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 68.2,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        },
+        "rolls": {
+          "value": {
+            "first": 0,
+            "second": 0
+          },
+          "raw": "000 / 000",
+          "ocr_confidence": 90.9,
+          "engine": "rapidocr",
+          "method": "separate_pair_cells",
+          "candidates": [
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 93.6,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "0",
+                  "ocr_confidence": 78.1,
+                  "variant": "color"
+                },
+                {
+                  "text": "0",
+                  "ocr_confidence": 83.5,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 93.3,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 93.6,
+                  "variant": "repeat_gray"
+                }
+              ]
+            },
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 90.9,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "6",
+                  "ocr_confidence": 32.7,
+                  "variant": "color"
+                },
+                {
+                  "text": "6",
+                  "ocr_confidence": 21.9,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 86.2,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 90.9,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        },
+        "lifts": {
+          "value": {
+            "first": 0,
+            "second": 0
+          },
+          "raw": "000 / 000",
+          "ocr_confidence": 76.0,
+          "engine": "rapidocr",
+          "method": "separate_pair_cells",
+          "candidates": [
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 76.0,
+              "engine": "rapidocr",
+              "method": "repeat_color",
+              "candidates": [
+                {
+                  "text": "0",
+                  "ocr_confidence": 27.9,
+                  "variant": "color"
+                },
+                {
+                  "text": "0",
+                  "ocr_confidence": 35.3,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 76.0,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 71.2,
+                  "variant": "repeat_gray"
+                }
+              ]
+            },
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 92.5,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "0",
+                  "ocr_confidence": 21.6,
+                  "variant": "color"
+                },
+                {
+                  "text": "D",
+                  "ocr_confidence": 37.3,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 88.1,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 92.5,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        },
+        "fakes": {
+          "value": {
+            "first": 0,
+            "second": 0
+          },
+          "raw": "000 / 000",
+          "ocr_confidence": 85.5,
+          "engine": "rapidocr",
+          "method": "separate_pair_cells",
+          "candidates": [
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 85.5,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "0",
+                  "ocr_confidence": 46.1,
+                  "variant": "color"
+                },
+                {
+                  "text": "0",
+                  "ocr_confidence": 47.4,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 82.1,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 85.5,
+                  "variant": "repeat_gray"
+                }
+              ]
+            },
+            {
+              "value": 0,
+              "raw": "000",
+              "ocr_confidence": 96.9,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "0",
+                  "ocr_confidence": 52.9,
+                  "variant": "color"
+                },
+                {
+                  "text": "0",
+                  "ocr_confidence": 47.9,
+                  "variant": "gray"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 95.5,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "000",
+                  "ocr_confidence": 96.9,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ratios_and_streaks": {
+        "ra": {
+          "value": "1.1:1",
+          "raw": "1.1 : 111",
+          "ocr_confidence": 96.9,
+          "engine": "rapidocr",
+          "method": "separate_ratio_cells",
+          "candidates": [
+            {
+              "value": 1.1,
+              "raw": "1.1",
+              "ocr_confidence": 96.9,
+              "engine": "rapidocr",
+              "method": "color",
+              "candidates": [
+                {
+                  "text": "1.1",
+                  "ocr_confidence": 96.9,
+                  "variant": "color"
+                },
+                {
+                  "text": "1.1",
+                  "ocr_confidence": 96.1,
+                  "variant": "gray"
+                }
+              ]
+            },
+            {
+              "value": 1,
+              "raw": "111",
+              "ocr_confidence": 99.7,
+              "engine": "rapidocr",
+              "method": "repeat_gray",
+              "candidates": [
+                {
+                  "text": "1",
+                  "ocr_confidence": 99.6,
+                  "variant": "color"
+                },
+                {
+                  "text": "1",
+                  "ocr_confidence": 99.6,
+                  "variant": "gray"
+                },
+                {
+                  "text": "111",
+                  "ocr_confidence": 99.1,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "111",
+                  "ocr_confidence": 99.7,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        },
+        "ma": {
+          "value": null,
+          "raw": null,
+          "ocr_confidence": null,
+          "engine": "rapidocr",
+          "candidates": [
+            {
+              "value": null,
+              "raw": null,
+              "ocr_confidence": null,
+              "engine": "rapidocr",
+              "candidates": [
+                {
+                  "text": "1.3",
+                  "ocr_confidence": 79.0,
+                  "variant": "color"
+                },
+                {
+                  "text": "1.3",
+                  "ocr_confidence": 83.0,
+                  "variant": "gray"
+                }
+              ]
+            },
+            {
+              "value": 1,
+              "raw": "1",
+              "ocr_confidence": 94.4,
+              "engine": "rapidocr",
+              "method": "gray",
+              "candidates": [
+                {
+                  "text": "21",
+                  "ocr_confidence": 60.2,
+                  "variant": "color"
+                },
+                {
+                  "text": "1",
+                  "ocr_confidence": 94.4,
+                  "variant": "gray"
+                },
+                {
+                  "text": "211",
+                  "ocr_confidence": 40.1,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "21:1:1",
+                  "ocr_confidence": 34.7,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        },
+        "pa": {
+          "value": null,
+          "raw": null,
+          "ocr_confidence": null,
+          "engine": "rapidocr",
+          "candidates": [
+            {
+              "value": 2.5,
+              "raw": "2.5",
+              "ocr_confidence": 97.9,
+              "engine": "rapidocr",
+              "method": "color",
+              "candidates": [
+                {
+                  "text": "2.5",
+                  "ocr_confidence": 97.9,
+                  "variant": "color"
+                },
+                {
+                  "text": "2.5",
+                  "ocr_confidence": 97.6,
+                  "variant": "gray"
+                }
+              ]
+            },
+            {
+              "value": null,
+              "raw": null,
+              "ocr_confidence": null,
+              "engine": "rapidocr",
+              "candidates": [
+                {
+                  "text": "1",
+                  "ocr_confidence": 70.7,
+                  "variant": "color"
+                },
+                {
+                  "text": "1",
+                  "ocr_confidence": 56.1,
+                  "variant": "gray"
+                },
+                {
+                  "text": "",
+                  "ocr_confidence": 0.0,
+                  "variant": "repeat_color"
+                },
+                {
+                  "text": "11",
+                  "ocr_confidence": 27.4,
+                  "variant": "repeat_gray"
+                }
+              ]
+            }
+          ]
+        },
+        "longest_mfc": {
+          "value": 18,
+          "raw": "18",
+          "ocr_confidence": 93.1,
+          "engine": "rapidocr",
+          "method": "color",
+          "candidates": [
+            {
+              "text": "18",
+              "ocr_confidence": 93.1,
+              "variant": "color"
+            },
+            {
+              "text": "18",
+              "ocr_confidence": 91.8,
+              "variant": "gray"
+            }
+          ]
+        },
+        "longest_pfc": {
+          "value": null,
+          "raw": null,
+          "ocr_confidence": null,
+          "engine": "rapidocr",
+          "candidates": [
+            {
+              "text": "53",
+              "ocr_confidence": 77.4,
+              "variant": "color"
+            },
+            {
+              "text": "53",
+              "ocr_confidence": 77.2,
+              "variant": "gray"
+            }
+          ]
+        }
+      }
+    },
+    "judgment_rows": {
+      "text": "Marvelous 679\nPerfect 537\nGreat 215\nGood 1\nBad 1\nMiss 1",
+      "lines": [
+        {
+          "text": "Marvelous 679",
+          "ocr_confidence": 98.0
+        },
+        {
+          "text": "Perfect 537",
+          "ocr_confidence": 99.2
+        },
+        {
+          "text": "Great 215",
+          "ocr_confidence": 99.9
+        },
+        {
+          "text": "Good 1",
+          "ocr_confidence": 99.8
+        },
+        {
+          "text": "Bad 1",
+          "ocr_confidence": 99.7
+        },
+        {
+          "text": "Miss 1",
+          "ocr_confidence": 99.6
+        }
+      ],
+      "method": "fixed_numeric_cells",
+      "numeric_engine": "rapidocr"
+    }
+  },
+  "crops": {
+    "results": "results.png",
+    "accuracy": "accuracy.png",
+    "grade": "grade.png",
+    "ratings": "ratings.png",
+    "timing_stats": "timing_stats.png",
+    "auxiliary_counts": "auxiliary_counts.png",
+    "ratios_and_streaks": "ratios_and_streaks.png",
+    "offset_graph": "offset_graph.png",
+    "song_and_rate": "song_and_rate.png",
+    "options": "options.png",
+    "detected_content": "detected_content.png"
+  },
+  "completeness": {
+    "expected_fields": 26,
+    "read_fields": 23,
+    "missing_fields": [
+      "ratios_and_streaks.ma",
+      "ratios_and_streaks.pa",
+      "ratios_and_streaks.longest_pfc"
+    ],
+    "review_fields": [],
+    "not_displayed": [
+      "timing.mean_absolute_ms",
+      "timing.smallest_ms"
+    ]
+  },
+  "graph": {
+    "image": "offset_graph.png",
+    "events": null,
+    "time_axis": "uncalibrated",
+    "offset_scale": "not_digitized"
+  },
+  "warnings": [
+    "OCR output requires review; confidence scores are not calibrated probabilities.",
+    "Graph is an image crop, not reconstructed replay data. No exact event timestamps extracted.",
+    "Missing displayed fields: ratios_and_streaks.ma, ratios_and_streaks.pa, ratios_and_streaks.longest_pfc.",
+    "Partial extraction: readable fields and graph are retained; unreadable numbers are not filled from the reference.",
+    "Alignment used shared visual content with the reference, including artwork; a different chart or theme may need alignment correction."
+  ],
+  "job_id": "ba670472-1504-482a-8cb1-19e55f03041f",
+  "review_path": "/?job=ba670472-1504-482a-8cb1-19e55f03041f"
+}

@@ -1,0 +1,537 @@
+{
+  "status": "partial",
+  "source": "screen",
+  "layout": "etterna_4k_results_v2",
+  "alignment": "auto_game_content",
+  "alignment_details": {
+    "algorithm": "SIFT_RANSAC_content_registration",
+    "matching_mode": "appearance_assisted",
+    "inliers": 218,
+    "candidate_matches": 324,
+    "reference_spatial_coverage": 0.521,
+    "median_reprojection_error_scaled_px": 0.61,
+    "reference_used_for": "geometry_only_not_result_values",
+    "resampling": "perspective_corrected",
+    "visible_game_fraction": 1.0,
+    "game_corners_in_photo_normalized": [
+      [
+        0.12996,
+        0.25764
+      ],
+      [
+        0.83253,
+        0.14839
+      ],
+      [
+        0.78867,
+        0.5866
+      ],
+      [
+        0.25022,
+        0.69627
+      ]
+    ]
+  },
+  "data": {
+    "accuracy_percent": {
+      "value": 87.57,
+      "raw": "87.57% [W3 34)",
+      "ocr_confidence": 12.0
+    },
+    "accuracy_label": {
+      "value": "87.57% [W3 34)",
+      "raw": "87.57% [W3 34)",
+      "ocr_confidence": 12.0
+    },
+    "judgments": {
+      "marvelous": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "perfect": {
+        "value": 537,
+        "raw": "Perfect 537",
+        "ocr_confidence": 70.0
+      },
+      "great": {
+        "value": 215,
+        "raw": "Great 215",
+        "ocr_confidence": 81.0
+      },
+      "good": {
+        "value": 41,
+        "raw": "Good 41",
+        "ocr_confidence": 48.0
+      },
+      "bad": {
+        "value": 4,
+        "raw": "Bad 4",
+        "ocr_confidence": 73.0
+      },
+      "miss": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "timing": {
+      "mean_absolute_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "mean_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "standard_deviation_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "smallest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "largest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "left_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "right_cbs": {
+        "value": 0,
+        "raw": "Right CBs 0",
+        "ocr_confidence": 59.3
+      }
+    },
+    "playback_rate": {
+      "value": 1.0,
+      "raw": "1x",
+      "ocr_confidence": 76.0
+    },
+    "judge_setting": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "auxiliary_counts": {
+      "holds": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "mines": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "rolls": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "lifts": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "fakes": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "song_text": "Hatsune Miku no Gekishou\ncosMo\nhi 19h 19 Pack 5 - Streams and Memes\n1x",
+    "unlabeled_ratings_text": [
+      "16.92 - 14.32 HD"
+    ],
+    "grade": {
+      "value": "A",
+      "raw": "A",
+      "ocr_confidence": 92.0
+    },
+    "wife_version": {
+      "value": 3,
+      "raw": "87.57% [W3 34)",
+      "ocr_confidence": 12.0
+    },
+    "ratios_and_streaks": {
+      "ra": {
+        "value": "1.1",
+        "raw": "RA: 1.1",
+        "ocr_confidence": 39.0
+      },
+      "ma": {
+        "value": "1.301",
+        "raw": "MA: 1.301",
+        "ocr_confidence": 51.0
+      },
+      "pa": {
+        "value": "2.5:1",
+        "raw": "PA: 2.5:1",
+        "ocr_confidence": 72.5
+      },
+      "longest_mfc": {
+        "value": 18,
+        "raw": "Longest MFC: 18",
+        "ocr_confidence": 90.7
+      },
+      "longest_pfc": {
+        "value": 53,
+        "raw": "Longest PFC: 53",
+        "ocr_confidence": 94.0
+      }
+    }
+  },
+  "ocr": {
+    "results": {
+      "text": "Marve \u201c~( | 679um\nPeter q SS7Gum\nMiss 10mm",
+      "lines": [
+        {
+          "text": "Marve \u201c~( | 679um",
+          "ocr_confidence": 23.2
+        },
+        {
+          "text": "Peter q SS7Gum",
+          "ocr_confidence": 17.3
+        },
+        {
+          "text": "Miss 10mm",
+          "ocr_confidence": 49.5
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "accuracy": {
+      "text": "87.57% [W3 34)",
+      "lines": [
+        {
+          "text": "87.57% [W3 34)",
+          "ocr_confidence": 12.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "grade": {
+      "text": "A",
+      "lines": [
+        {
+          "text": "A",
+          "ocr_confidence": 92.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "ratings": {
+      "text": "16.92 - 14.32 HD",
+      "lines": [
+        {
+          "text": "16.92 - 14.32 HD",
+          "ocr_confidence": 91.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "timing_stats": {
+      "text": "Moan 23.37\nSd 21.7ime\nLargest \u00ab+ 164.57?ee\nLeft CBs |\nRight CBs 0",
+      "lines": [
+        {
+          "text": "Moan 23.37",
+          "ocr_confidence": 58.0
+        },
+        {
+          "text": "Sd 21.7ime",
+          "ocr_confidence": 46.0
+        },
+        {
+          "text": "Largest \u00ab+ 164.57?ee",
+          "ocr_confidence": 8.3
+        },
+        {
+          "text": "Left CBs |",
+          "ocr_confidence": 50.3
+        },
+        {
+          "text": "Right CBs 0",
+          "ocr_confidence": 59.3
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "auxiliary_counts": {
+      "text": "Holds 2702\nMinas o 0\nRolie \u201cwv @\nLifts ov 0\nFokes o 0",
+      "lines": [
+        {
+          "text": "Holds 2702",
+          "ocr_confidence": 23.5
+        },
+        {
+          "text": "Minas o 0",
+          "ocr_confidence": 60.7
+        },
+        {
+          "text": "Rolie \u201cwv @",
+          "ocr_confidence": 51.3
+        },
+        {
+          "text": "Lifts ov 0",
+          "ocr_confidence": 51.7
+        },
+        {
+          "text": "Fokes o 0",
+          "ocr_confidence": 60.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "ratios_and_streaks": {
+      "text": "RA: 1.1\nMA: 1.301\nPA: 2.5:1\nLongest MFC: 18\nLongest PFC: 53",
+      "lines": [
+        {
+          "text": "RA: 1.1",
+          "ocr_confidence": 39.0
+        },
+        {
+          "text": "MA: 1.301",
+          "ocr_confidence": 51.0
+        },
+        {
+          "text": "PA: 2.5:1",
+          "ocr_confidence": 72.5
+        },
+        {
+          "text": "Longest MFC: 18",
+          "ocr_confidence": 90.7
+        },
+        {
+          "text": "Longest PFC: 53",
+          "ocr_confidence": 94.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "song_and_rate": {
+      "text": "Hatsune Miku no Gekishou\ncosMo\nhi 19h 19 Pack 5 - Streams and Memes\n1x",
+      "lines": [
+        {
+          "text": "Hatsune Miku no Gekishou",
+          "ocr_confidence": 93.2
+        },
+        {
+          "text": "cosMo",
+          "ocr_confidence": 91.0
+        },
+        {
+          "text": "hi 19h 19 Pack 5 - Streams and Memes",
+          "ocr_confidence": 65.2
+        },
+        {
+          "text": "1x",
+          "ocr_confidence": 76.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "options": {
+      "text": "C962, 30% Mini, Reverse, Overhead, Aggro_boal2",
+      "lines": [
+        {
+          "text": "C962, 30% Mini, Reverse, Overhead, Aggro_boal2",
+          "ocr_confidence": 84.2
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "judgment_rows": {
+      "text": "Perfect 537\nGreat 215\nGood 41\nBad 4",
+      "lines": [
+        {
+          "text": "Perfect 537",
+          "ocr_confidence": 70.0
+        },
+        {
+          "text": "Great 215",
+          "ocr_confidence": 81.0
+        },
+        {
+          "text": "Good 41",
+          "ocr_confidence": 48.0
+        },
+        {
+          "text": "Bad 4",
+          "ocr_confidence": 73.0
+        }
+      ],
+      "method": "separate_label_and_numeric_column",
+      "readings": [
+        {
+          "label": "Marvelous",
+          "label_ocr": {
+            "text": "Marveioua",
+            "lines": [
+              {
+                "text": "Marveioua",
+                "ocr_confidence": 4.0
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "tesseract"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Perfect",
+          "label_ocr": {
+            "text": "Peet",
+            "lines": [
+              {
+                "text": "Peet",
+                "ocr_confidence": 45.0
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "number_ocr": {
+            "text": "537",
+            "lines": [
+              {
+                "text": "537",
+                "ocr_confidence": 70.0
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Great",
+          "label_ocr": {
+            "text": "x",
+            "lines": [
+              {
+                "text": "x",
+                "ocr_confidence": 22.0
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "number_ocr": {
+            "text": "215",
+            "lines": [
+              {
+                "text": "215",
+                "ocr_confidence": 81.0
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Good",
+          "label_ocr": {
+            "text": "tet im",
+            "lines": [
+              {
+                "text": "tet im",
+                "ocr_confidence": 58.5
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "number_ocr": {
+            "text": "41",
+            "lines": [
+              {
+                "text": "41",
+                "ocr_confidence": 48.0
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Bad",
+          "label_ocr": {
+            "text": "tm a",
+            "lines": [
+              {
+                "text": "tm a",
+                "ocr_confidence": 18.5
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "number_ocr": {
+            "text": "4",
+            "lines": [
+              {
+                "text": "4",
+                "ocr_confidence": 73.0
+              }
+            ],
+            "engine": "tesseract"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Miss",
+          "label_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "tesseract"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "tesseract"
+          },
+          "label_source": "registered_layout"
+        }
+      ]
+    }
+  },
+  "crops": {
+    "results": "results.png",
+    "accuracy": "accuracy.png",
+    "grade": "grade.png",
+    "ratings": "ratings.png",
+    "timing_stats": "timing_stats.png",
+    "auxiliary_counts": "auxiliary_counts.png",
+    "ratios_and_streaks": "ratios_and_streaks.png",
+    "offset_graph": "offset_graph.png",
+    "song_and_rate": "song_and_rate.png",
+    "options": "options.png",
+    "detected_content": "detected_content.png"
+  },
+  "graph": {
+    "image": "offset_graph.png",
+    "events": null,
+    "time_axis": "uncalibrated",
+    "offset_scale": "not_digitized"
+  },
+  "warnings": [
+    "OCR output requires review; confidence scores are not calibrated probabilities.",
+    "Graph is an image crop, not reconstructed replay data. No exact event timestamps extracted.",
+    "Unreadable judgment count: marvelous.",
+    "Review low-confidence judgment OCR: good.",
+    "Unreadable judgment count: miss.",
+    "Partial extraction: readable fields and graph are retained; unreadable numbers are not filled from the reference.",
+    "Alignment used shared visual content with the reference, including artwork; a different chart or theme may need alignment correction."
+  ],
+  "job_id": "60cb9126-35c5-4c0f-8250-863ffe3ffd13",
+  "review_path": "/?job=60cb9126-35c5-4c0f-8250-863ffe3ffd13"
+}

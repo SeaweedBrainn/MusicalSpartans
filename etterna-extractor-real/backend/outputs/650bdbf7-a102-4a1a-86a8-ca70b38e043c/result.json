@@ -1,0 +1,9 @@
+{
+  "status": "unsupported_or_unreadable",
+  "source": "screen",
+  "warnings": [
+    "Expected judgment labels were not found. Check screen corners, focus, and theme."
+  ],
+  "job_id": "650bdbf7-a102-4a1a-86a8-ca70b38e043c",
+  "review_path": "/?job=650bdbf7-a102-4a1a-86a8-ca70b38e043c"
+}

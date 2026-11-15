@@ -1,0 +1,23 @@
+{
+  "status": "session_error",
+  "source": "game_session",
+  "remote_session": {
+    "handle": "948a1d3a6434484da14b95c627324f1f",
+    "runs": [],
+    "run_count": 0
+  },
+  "session_diagnostic": {
+    "api_origin": "https://rhythm-backend-emmanuel-hvfkdjhxfjc4d9a5.westus-01.azurewebsites.net",
+    "session_fingerprint": "0d4d94b19d0f",
+    "http_status": 401,
+    "backend_error_code": "unauthorized",
+    "stage": "list_runs"
+  },
+  "warnings": [
+    "QR decoded, but the session API returned HTTP 401: this session ID/read-key pair was rejected. Start a fresh game session and verify registration succeeded on the same API origin."
+  ],
+  "crops": {},
+  "qr_decoder": "zxing-cpp",
+  "job_id": "775e562d-b893-4dbf-a07c-c8932f5d686d",
+  "review_path": "/?job=775e562d-b893-4dbf-a07c-c8932f5d686d"
+}

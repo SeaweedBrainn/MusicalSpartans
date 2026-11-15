@@ -1,0 +1,16 @@
+{
+  "status": "session_error",
+  "source": "game_session",
+  "remote_session": {
+    "handle": "55da7cf7ed2f45cda7991d794814d288",
+    "runs": [],
+    "run_count": 0
+  },
+  "warnings": [
+    "Session CSV or metadata is invalid. No coaching was generated."
+  ],
+  "crops": {},
+  "qr_decoder": "zxing-cpp",
+  "job_id": "39829ff1-b381-41bd-8ecd-377f95f58c56",
+  "review_path": "/?job=39829ff1-b381-41bd-8ecd-377f95f58c56"
+}

@@ -1,0 +1,186 @@
+{
+  "status": "run_analyzed",
+  "source": "game_csv",
+  "qr_payload": "mentra-run:v1:f0ddf9a2c831425185092f7caaf58673",
+  "game_run": {
+    "run_id": "f0ddf9a2c831425185092f7caaf58673",
+    "created_at": "2026-11-15T10:32:23.342654+00:00",
+    "run": {
+      "format_version": 1,
+      "notes": [],
+      "nominal_bpm": null,
+      "summary": {
+        "game_id": 1,
+        "song_id": 10,
+        "difficulty": 2,
+        "game_time_ms": 14000,
+        "bpm": 120,
+        "total_notes": 25,
+        "score": 1000000,
+        "average_latency_ms": 26.0
+      },
+      "chart_id": 1,
+      "samples": [
+        {
+          "time_sec": 0.0,
+          "accuracy": null,
+          "avg_latency_ms": null,
+          "bpm": 120.0,
+          "nps": 0,
+          "latency_spread_ms": null
+        },
+        {
+          "time_sec": 1.0,
+          "accuracy": null,
+          "avg_latency_ms": null,
+          "bpm": 120.0,
+          "nps": 0,
+          "latency_spread_ms": null
+        },
+        {
+          "time_sec": 2.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 40.0,
+          "bpm": 120.0,
+          "nps": 2,
+          "latency_spread_ms": 3.0
+        },
+        {
+          "time_sec": 3.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 25.0,
+          "bpm": 120.0,
+          "nps": 2,
+          "latency_spread_ms": 3.0
+        },
+        {
+          "time_sec": 4.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 8.0,
+          "bpm": 120.0,
+          "nps": 2,
+          "latency_spread_ms": 1.0
+        },
+        {
+          "time_sec": 5.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 32.0,
+          "bpm": 120.0,
+          "nps": 1,
+          "latency_spread_ms": null
+        },
+        {
+          "time_sec": 6.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 27.0,
+          "bpm": 120.0,
+          "nps": 3,
+          "latency_spread_ms": 5.0
+        },
+        {
+          "time_sec": 7.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 22.0,
+          "bpm": 120.0,
+          "nps": 2,
+          "latency_spread_ms": 7.0
+        },
+        {
+          "time_sec": 8.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 24.0,
+          "bpm": 120.0,
+          "nps": 2,
+          "latency_spread_ms": 3.0
+        },
+        {
+          "time_sec": 9.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 35.0,
+          "bpm": 120.0,
+          "nps": 1,
+          "latency_spread_ms": null
+        },
+        {
+          "time_sec": 10.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 28.0,
+          "bpm": 120.0,
+          "nps": 4,
+          "latency_spread_ms": 5.0
+        },
+        {
+          "time_sec": 11.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 31.0,
+          "bpm": 120.0,
+          "nps": 4,
+          "latency_spread_ms": 8.0
+        },
+        {
+          "time_sec": 12.0,
+          "accuracy": 1.0,
+          "avg_latency_ms": 16.0,
+          "bpm": 120.0,
+          "nps": 2,
+          "latency_spread_ms": 6.0
+        },
+        {
+          "time_sec": 13.0,
+          "accuracy": null,
+          "avg_latency_ms": null,
+          "bpm": 120.0,
+          "nps": 0,
+          "latency_spread_ms": null
+        }
+      ],
+      "timeline_available": true,
+      "sample_interval_sec": 1.0,
+      "video_uri": null,
+      "video_offset_ms": null,
+      "warnings": []
+    },
+    "analysis": {
+      "score": 1000000,
+      "accuracy": 1.0,
+      "grade": "Perfect",
+      "mean_offset_ms": 26.16,
+      "sections": [
+        {
+          "start_ms": 0,
+          "end_ms": 5000,
+          "accuracy": 1.0,
+          "mean_offset_ms": 24.333333333333332,
+          "spread_ms": 2.3333333333333335
+        },
+        {
+          "start_ms": 5000,
+          "end_ms": 10000,
+          "accuracy": 1.0,
+          "mean_offset_ms": 26.666666666666668,
+          "spread_ms": 5.0
+        },
+        {
+          "start_ms": 10000,
+          "end_ms": 14000,
+          "accuracy": 1.0,
+          "mean_offset_ms": 26.8,
+          "spread_ms": 6.333333333333333
+        }
+      ],
+      "tips": [
+        {
+          "time_ms": 0,
+          "spans_song": true,
+          "text": "Your hits averaged 26 ms late across the song. If this repeats across songs, review the game's audio offset."
+        }
+      ],
+      "spoken_summary": "You scored 1000000, grade Perfect. Your hits averaged 26 ms late across the song. If this repeats across songs, review the game's audio offset.",
+      "method": "rule_based_custom_game_v1"
+    }
+  },
+  "warnings": [],
+  "crops": {},
+  "job_id": "36f7c14f-878f-487e-bab4-df4c3d1be5db",
+  "review_path": "/?job=36f7c14f-878f-487e-bab4-df4c3d1be5db"
+}

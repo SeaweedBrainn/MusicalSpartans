@@ -1,0 +1,586 @@
+{
+  "status": "partial",
+  "source": "screen",
+  "layout": "etterna_4k_results_v2",
+  "alignment": "auto_game_content",
+  "alignment_details": {
+    "algorithm": "SIFT_RANSAC_content_registration",
+    "matching_mode": "appearance_assisted",
+    "inliers": 794,
+    "candidate_matches": 1004,
+    "reference_spatial_coverage": 0.871,
+    "median_reprojection_error_scaled_px": 0.11,
+    "reference_used_for": "geometry_only_not_result_values",
+    "resampling": "skipped_identity_transform",
+    "visible_game_fraction": 1.0,
+    "game_corners_in_photo_normalized": [
+      [
+        -2e-05,
+        3e-05
+      ],
+      [
+        0.99913,
+        0.00018
+      ],
+      [
+        0.99909,
+        0.99837
+      ],
+      [
+        6e-05,
+        0.99842
+      ]
+    ]
+  },
+  "data": {
+    "accuracy_percent": {
+      "value": 87.57,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 100.0
+    },
+    "accuracy_label": {
+      "value": "87.57% [W3 J4]",
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 100.0
+    },
+    "judgments": {
+      "marvelous": {
+        "value": 679,
+        "raw": "Marvelous 679",
+        "ocr_confidence": 100.0
+      },
+      "perfect": {
+        "value": 537,
+        "raw": "Perfect 537",
+        "ocr_confidence": 100.0
+      },
+      "great": {
+        "value": 215,
+        "raw": "Great 215",
+        "ocr_confidence": 100.0
+      },
+      "good": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "bad": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "miss": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "timing": {
+      "mean_absolute_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "mean_ms": {
+        "value": 23.37,
+        "raw": "Mean 23.37ms",
+        "ocr_confidence": 100.0
+      },
+      "standard_deviation_ms": {
+        "value": 21.75,
+        "raw": "Sd 21.75ms",
+        "ocr_confidence": 100.0
+      },
+      "smallest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "largest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "left_cbs": {
+        "value": 3,
+        "raw": "Left CBs 3",
+        "ocr_confidence": 100.0
+      },
+      "right_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "playback_rate": {
+      "value": 1.0,
+      "raw": "1x",
+      "ocr_confidence": 30.0
+    },
+    "judge_setting": {
+      "value": 4,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 100.0
+    },
+    "auxiliary_counts": {
+      "holds": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "mines": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "rolls": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "lifts": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "fakes": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "song_text": "Hatsune Miku no Gekishou\ncosMo\nhi 19hi 19 Pack 5 - Streams and Memes\n1x",
+    "unlabeled_ratings_text": [
+      "16.92 ~ 14.32 HD"
+    ],
+    "grade": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "wife_version": {
+      "value": 3,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 100.0
+    },
+    "ratios_and_streaks": {
+      "ra": {
+        "value": "1.1:1",
+        "raw": "RA: 1.1:1",
+        "ocr_confidence": 100.0
+      },
+      "ma": {
+        "value": "1.3:1",
+        "raw": "MA: 1.3:1",
+        "ocr_confidence": 30.0
+      },
+      "pa": {
+        "value": "2.5:1",
+        "raw": "PA: 2.5:1",
+        "ocr_confidence": 30.0
+      },
+      "longest_mfc": {
+        "value": 18,
+        "raw": "Longest MFC: 18",
+        "ocr_confidence": 100.0
+      },
+      "longest_pfc": {
+        "value": 53,
+        "raw": "Longest PFC: 53",
+        "ocr_confidence": 50.0
+      }
+    }
+  },
+  "ocr": {
+    "results": {
+      "text": "Marvelous 679 (47.35%)\nPerfect 53 7 (37.45%)\nGreat 2 15 (14.99%)\nGood 1 (0.07%)\nBad 1 (0.07%)\nMiss 1 (0.07%)",
+      "lines": [
+        {
+          "text": "Marvelous 679 (47.35%)",
+          "ocr_confidence": 75.0
+        },
+        {
+          "text": "Perfect 53 7 (37.45%)",
+          "ocr_confidence": 75.0
+        },
+        {
+          "text": "Great 2 15 (14.99%)",
+          "ocr_confidence": 75.0
+        },
+        {
+          "text": "Good 1 (0.07%)",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Bad 1 (0.07%)",
+          "ocr_confidence": 75.0
+        },
+        {
+          "text": "Miss 1 (0.07%)",
+          "ocr_confidence": 75.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "accuracy": {
+      "text": "87.57% [W3 J4]",
+      "lines": [
+        {
+          "text": "87.57% [W3 J4]",
+          "ocr_confidence": 100.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "grade": {
+      "text": "",
+      "lines": [],
+      "engine": "apple_vision"
+    },
+    "ratings": {
+      "text": "16.92 ~ 14.32 HD",
+      "lines": [
+        {
+          "text": "16.92 ~ 14.32 HD",
+          "ocr_confidence": 100.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "timing_stats": {
+      "text": "Mean 23.37ms\nSd 21.75ms\nLargest - 164.57ms\nLeft CBs 3\nRight CBs",
+      "lines": [
+        {
+          "text": "Mean 23.37ms",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Sd 21.75ms",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Largest - 164.57ms",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Left CBs 3",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Right CBs",
+          "ocr_confidence": 100.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "auxiliary_counts": {
+      "text": "SPIOH 200/200\n000/000\n000/000\nSH!7 000/000\n000/000",
+      "lines": [
+        {
+          "text": "SPIOH 200/200",
+          "ocr_confidence": 65.0
+        },
+        {
+          "text": "000/000",
+          "ocr_confidence": 50.0
+        },
+        {
+          "text": "000/000",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "SH!7 000/000",
+          "ocr_confidence": 65.0
+        },
+        {
+          "text": "000/000",
+          "ocr_confidence": 100.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "ratios_and_streaks": {
+      "text": "RA: 1.1:1\nMA: 1.3:1\nPA: 2.5:1\nLongest MFC: 18\nLongest PFC: 53",
+      "lines": [
+        {
+          "text": "RA: 1.1:1",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "MA: 1.3:1",
+          "ocr_confidence": 30.0
+        },
+        {
+          "text": "PA: 2.5:1",
+          "ocr_confidence": 30.0
+        },
+        {
+          "text": "Longest MFC: 18",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Longest PFC: 53",
+          "ocr_confidence": 50.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "song_and_rate": {
+      "text": "Hatsune Miku no Gekishou\ncosMo\nhi 19hi 19 Pack 5 - Streams and Memes\n1x",
+      "lines": [
+        {
+          "text": "Hatsune Miku no Gekishou",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "cosMo",
+          "ocr_confidence": 50.0
+        },
+        {
+          "text": "hi 19hi 19 Pack 5 - Streams and Memes",
+          "ocr_confidence": 50.0
+        },
+        {
+          "text": "1x",
+          "ocr_confidence": 30.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "options": {
+      "text": "C962, 30% Mini, Reverse, Overhead, Aggro_baal2",
+      "lines": [
+        {
+          "text": "C962, 30% Mini, Reverse, Overhead, Aggro_baal2",
+          "ocr_confidence": 100.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "judgment_rows": {
+      "text": "Marvelous 679\nPerfect 537\nGreat 215",
+      "lines": [
+        {
+          "text": "Marvelous 679",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Perfect 537",
+          "ocr_confidence": 100.0
+        },
+        {
+          "text": "Great 215",
+          "ocr_confidence": 100.0
+        }
+      ],
+      "method": "separate_label_and_numeric_column",
+      "readings": [
+        {
+          "label": "Marvelous",
+          "label_ocr": {
+            "text": "Marvelous",
+            "lines": [
+              {
+                "text": "Marvelous",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "679",
+            "lines": [
+              {
+                "text": "679",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "679",
+            "lines": [
+              {
+                "text": "679",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Perfect",
+          "label_ocr": {
+            "text": "Perfect",
+            "lines": [
+              {
+                "text": "Perfect",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "537",
+            "lines": [
+              {
+                "text": "537",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "537",
+            "lines": [
+              {
+                "text": "537",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Great",
+          "label_ocr": {
+            "text": "Great",
+            "lines": [
+              {
+                "text": "Great",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "215",
+            "lines": [
+              {
+                "text": "215",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "215",
+            "lines": [
+              {
+                "text": "215",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Good",
+          "label_ocr": {
+            "text": "Good",
+            "lines": [
+              {
+                "text": "Good",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Bad",
+          "label_ocr": {
+            "text": "Bad",
+            "lines": [
+              {
+                "text": "Bad",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Miss",
+          "label_ocr": {
+            "text": "Miss",
+            "lines": [
+              {
+                "text": "Miss",
+                "ocr_confidence": 100.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        }
+      ]
+    }
+  },
+  "crops": {
+    "results": "results.png",
+    "accuracy": "accuracy.png",
+    "grade": "grade.png",
+    "ratings": "ratings.png",
+    "timing_stats": "timing_stats.png",
+    "auxiliary_counts": "auxiliary_counts.png",
+    "ratios_and_streaks": "ratios_and_streaks.png",
+    "offset_graph": "offset_graph.png",
+    "song_and_rate": "song_and_rate.png",
+    "options": "options.png",
+    "detected_content": "detected_content.png"
+  },
+  "graph": {
+    "image": "offset_graph.png",
+    "events": null,
+    "time_axis": "uncalibrated",
+    "offset_scale": "not_digitized"
+  },
+  "warnings": [
+    "OCR output requires review; confidence scores are not calibrated probabilities.",
+    "Graph is an image crop, not reconstructed replay data. No exact event timestamps extracted.",
+    "Unreadable judgment count: good.",
+    "Unreadable judgment count: bad.",
+    "Unreadable judgment count: miss.",
+    "Unreadable displayed timing fields: largest_ms, right_cbs.",
+    "Partial extraction: readable fields and graph are retained; unreadable numbers are not filled from the reference.",
+    "Alignment used shared visual content with the reference, including artwork; a different chart or theme may need alignment correction."
+  ],
+  "job_id": "b6b041e8-f983-4804-9d41-b288e7384970",
+  "review_path": "/?job=b6b041e8-f983-4804-9d41-b288e7384970"
+}

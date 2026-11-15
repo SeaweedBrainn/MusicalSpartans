@@ -1,0 +1,464 @@
+{
+  "status": "partial",
+  "source": "screen",
+  "layout": "etterna_4k_results_v2",
+  "alignment": "auto_game_content",
+  "alignment_details": {
+    "algorithm": "SIFT_RANSAC_content_registration",
+    "matching_mode": "appearance_assisted",
+    "inliers": 88,
+    "candidate_matches": 181,
+    "reference_spatial_coverage": 0.62,
+    "median_reprojection_error_scaled_px": 0.84,
+    "reference_used_for": "geometry_only_not_result_values",
+    "resampling": "perspective_corrected",
+    "visible_game_fraction": 1.0,
+    "game_corners_in_photo_normalized": [
+      [
+        0.22817,
+        0.33183
+      ],
+      [
+        0.84042,
+        0.25797
+      ],
+      [
+        0.80794,
+        0.65745
+      ],
+      [
+        0.29935,
+        0.72285
+      ]
+    ]
+  },
+  "data": {
+    "accuracy_percent": {
+      "value": 87.57,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 50.0
+    },
+    "accuracy_label": {
+      "value": "87.57% [W3 J4]",
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 50.0
+    },
+    "judgments": {
+      "marvelous": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "perfect": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "great": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "good": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "bad": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "miss": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "timing": {
+      "mean_absolute_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "mean_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "standard_deviation_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "smallest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "largest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "left_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "right_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "playback_rate": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "judge_setting": {
+      "value": 4,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 50.0
+    },
+    "auxiliary_counts": {
+      "holds": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "mines": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "rolls": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "lifts": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "fakes": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "song_text": "Muteime Mikas no Geldehou\neseldo\nM 18N110 Poak & - Boresne and Momes",
+    "unlabeled_ratings_text": [
+      "16.92 \u2022 14.32 HD"
+    ],
+    "grade": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "wife_version": {
+      "value": 3,
+      "raw": "87.57% [W3 J4]",
+      "ocr_confidence": 50.0
+    },
+    "ratios_and_streaks": {
+      "ra": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "ma": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "pa": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "longest_mfc": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "longest_pfc": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    }
+  },
+  "ocr": {
+    "results": {
+      "text": "110",
+      "lines": [
+        {
+          "text": "110",
+          "ocr_confidence": 30.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "accuracy": {
+      "text": "87.57% [W3 J4]",
+      "lines": [
+        {
+          "text": "87.57% [W3 J4]",
+          "ocr_confidence": 50.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "grade": {
+      "text": "",
+      "lines": [],
+      "engine": "apple_vision"
+    },
+    "ratings": {
+      "text": "16.92 \u2022 14.32 HD",
+      "lines": [
+        {
+          "text": "16.92 \u2022 14.32 HD",
+          "ocr_confidence": 50.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "timing_stats": {
+      "text": "",
+      "lines": [],
+      "engine": "apple_vision"
+    },
+    "auxiliary_counts": {
+      "text": "002/002\n00 00\n00/\n00\n000 0D0",
+      "lines": [
+        {
+          "text": "002/002",
+          "ocr_confidence": 50.0
+        },
+        {
+          "text": "00 00",
+          "ocr_confidence": 40.0
+        },
+        {
+          "text": "00/",
+          "ocr_confidence": 30.0
+        },
+        {
+          "text": "00",
+          "ocr_confidence": 30.0
+        },
+        {
+          "text": "000 0D0",
+          "ocr_confidence": 30.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "ratios_and_streaks": {
+      "text": "PaAa\n12.0",
+      "lines": [
+        {
+          "text": "PaAa",
+          "ocr_confidence": 30.0
+        },
+        {
+          "text": "12.0",
+          "ocr_confidence": 30.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "song_and_rate": {
+      "text": "Muteime Mikas no Geldehou\neseldo\nM 18N110 Poak & - Boresne and Momes",
+      "lines": [
+        {
+          "text": "Muteime Mikas no Geldehou",
+          "ocr_confidence": 30.0
+        },
+        {
+          "text": "eseldo",
+          "ocr_confidence": 30.0
+        },
+        {
+          "text": "M 18N110 Poak & - Boresne and Momes",
+          "ocr_confidence": 30.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "options": {
+      "text": "C862, 30% Minl, Revere werl",
+      "lines": [
+        {
+          "text": "C862, 30% Minl, Revere werl",
+          "ocr_confidence": 30.0
+        }
+      ],
+      "engine": "apple_vision"
+    },
+    "judgment_rows": {
+      "text": "",
+      "lines": [],
+      "method": "separate_label_and_numeric_column",
+      "readings": [
+        {
+          "label": "Marvelous",
+          "label_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Perfect",
+          "label_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Great",
+          "label_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Good",
+          "label_ocr": {
+            "text": "2001",
+            "lines": [
+              {
+                "text": "2001",
+                "ocr_confidence": 30.0
+              }
+            ],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Bad",
+          "label_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        },
+        {
+          "label": "Miss",
+          "label_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "number_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "interior_ocr": {
+            "text": "",
+            "lines": [],
+            "engine": "apple_vision"
+          },
+          "label_source": "registered_layout"
+        }
+      ]
+    }
+  },
+  "crops": {
+    "results": "results.png",
+    "accuracy": "accuracy.png",
+    "grade": "grade.png",
+    "ratings": "ratings.png",
+    "timing_stats": "timing_stats.png",
+    "auxiliary_counts": "auxiliary_counts.png",
+    "ratios_and_streaks": "ratios_and_streaks.png",
+    "offset_graph": "offset_graph.png",
+    "song_and_rate": "song_and_rate.png",
+    "options": "options.png",
+    "detected_content": "detected_content.png"
+  },
+  "graph": {
+    "image": "offset_graph.png",
+    "events": null,
+    "time_axis": "uncalibrated",
+    "offset_scale": "not_digitized"
+  },
+  "warnings": [
+    "OCR output requires review; confidence scores are not calibrated probabilities.",
+    "Graph is an image crop, not reconstructed replay data. No exact event timestamps extracted.",
+    "Unreadable judgment count: marvelous.",
+    "Unreadable judgment count: perfect.",
+    "Unreadable judgment count: great.",
+    "Unreadable judgment count: good.",
+    "Unreadable judgment count: bad.",
+    "Unreadable judgment count: miss.",
+    "Unreadable displayed timing fields: mean_ms, standard_deviation_ms, largest_ms, left_cbs, right_cbs.",
+    "Partial extraction: readable fields and graph are retained; unreadable numbers are not filled from the reference.",
+    "Alignment used shared visual content with the reference, including artwork; a different chart or theme may need alignment correction."
+  ],
+  "job_id": "849dd664-a7a5-438c-8173-0f353c3c24e8",
+  "review_path": "/?job=849dd664-a7a5-438c-8173-0f353c3c24e8"
+}

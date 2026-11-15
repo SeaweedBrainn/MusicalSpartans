@@ -1,0 +1,336 @@
+{
+  "status": "partial",
+  "source": "screen",
+  "layout": "etterna_supplied_theme_v1",
+  "alignment": "manual_corners",
+  "alignment_details": null,
+  "data": {
+    "accuracy_percent": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "accuracy_label": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "judgments": {
+      "marvelous": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "perfect": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "great": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "good": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "bad": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "miss": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "timing": {
+      "mean_absolute_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "mean_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "standard_deviation_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "smallest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "largest_ms": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "left_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "right_cbs": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "playback_rate": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "judge_setting": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "auxiliary_counts": {
+      "holds": {
+        "value": {
+          "first": 2,
+          "second": 2
+        },
+        "raw": "Holds 2/2",
+        "ocr_confidence": 48.0
+      },
+      "mines": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "rolls": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "lifts": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "fakes": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    },
+    "song_text": "vvorvTN\n| hi19hi19 Pack 5 - Streams and Me",
+    "unlabeled_ratings_text": [],
+    "grade": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "wife_version": {
+      "value": null,
+      "raw": null,
+      "ocr_confidence": null
+    },
+    "ratios_and_streaks": {
+      "ra": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "ma": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "pa": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "longest_mfc": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      },
+      "longest_pfc": {
+        "value": null,
+        "raw": null,
+        "ocr_confidence": null
+      }
+    }
+  },
+  "ocr": {
+    "results": {
+      "text": "no ehis\nj~ \u2122\nC962, 30% Mini, Reverse, Overhead, Ag\nMec \u00ab+f\nez \u2014lt\u2014<it\u00e9\u201c<\u2018\nGreat |\nGood\nBad :\nMiss",
+      "lines": [
+        {
+          "text": "no ehis",
+          "ocr_confidence": 80.0
+        },
+        {
+          "text": "j~ \u2122",
+          "ocr_confidence": 29.5
+        },
+        {
+          "text": "C962, 30% Mini, Reverse, Overhead, Ag",
+          "ocr_confidence": 94.2
+        },
+        {
+          "text": "Mec \u00ab+f",
+          "ocr_confidence": 9.5
+        },
+        {
+          "text": "ez \u2014lt\u2014<it\u00e9\u201c<\u2018",
+          "ocr_confidence": 21.0
+        },
+        {
+          "text": "Great |",
+          "ocr_confidence": 48.0
+        },
+        {
+          "text": "Good",
+          "ocr_confidence": 96.0
+        },
+        {
+          "text": "Bad :",
+          "ocr_confidence": 72.0
+        },
+        {
+          "text": "Miss",
+          "ocr_confidence": 96.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "timing_stats": {
+      "text": "RA: 1.49 Mean\nMA: 1.39 sa\nPA: 2.501 Longest\nMFC: 18\nLongest PRC: 83 Right Ct",
+      "lines": [
+        {
+          "text": "RA: 1.49 Mean",
+          "ocr_confidence": 57.3
+        },
+        {
+          "text": "MA: 1.39 sa",
+          "ocr_confidence": 72.0
+        },
+        {
+          "text": "PA: 2.501 Longest",
+          "ocr_confidence": 53.7
+        },
+        {
+          "text": "MFC: 18",
+          "ocr_confidence": 93.5
+        },
+        {
+          "text": "Longest PRC: 83 Right Ct",
+          "ocr_confidence": 70.8
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "auxiliary_counts": {
+      "text": "Holds 2/2\nes o \u00b0o\nRows _o o\nLifts oo \u00a9\u00abo\nFomes ov 3@6",
+      "lines": [
+        {
+          "text": "Holds 2/2",
+          "ocr_confidence": 48.0
+        },
+        {
+          "text": "es o \u00b0o",
+          "ocr_confidence": 47.0
+        },
+        {
+          "text": "Rows _o o",
+          "ocr_confidence": 19.7
+        },
+        {
+          "text": "Lifts oo \u00a9\u00abo",
+          "ocr_confidence": 28.7
+        },
+        {
+          "text": "Fomes ov 3@6",
+          "ocr_confidence": 23.7
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "song_and_rate": {
+      "text": "vvorvTN\n| hi19hi19 Pack 5 - Streams and Me",
+      "lines": [
+        {
+          "text": "vvorvTN",
+          "ocr_confidence": 8.0
+        },
+        {
+          "text": "| hi19hi19 Pack 5 - Streams and Me",
+          "ocr_confidence": 82.0
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "footer": {
+      "text": "TIP: A score is good if It\u2019s good for you. There will clways be a bigger fish. canteen 8\nSASSO RNES .\u00ab.NMNaMsmor fn AT HF",
+      "lines": [
+        {
+          "text": "TIP: A score is good if It\u2019s good for you. There will clways be a bigger fish. canteen 8",
+          "ocr_confidence": 75.2
+        },
+        {
+          "text": "SASSO RNES .\u00ab.NMNaMsmor fn AT HF",
+          "ocr_confidence": 24.7
+        }
+      ],
+      "engine": "tesseract"
+    },
+    "judgment_rows": {
+      "text": "Pe\niy A Reoverce Overhead Ad\n; eres a \u2014_ |",
+      "lines": [
+        {
+          "text": "Pe",
+          "ocr_confidence": 20.0
+        },
+        {
+          "text": "iy A Reoverce Overhead Ad",
+          "ocr_confidence": 42.8
+        },
+        {
+          "text": "; eres a \u2014_ |",
+          "ocr_confidence": 11.6
+        }
+      ]
+    }
+  },
+  "crops": {
+    "results": "results.png",
+    "timing_stats": "timing_stats.png",
+    "auxiliary_counts": "auxiliary_counts.png",
+    "offset_graph": "offset_graph.png",
+    "song_and_rate": "song_and_rate.png",
+    "footer": "footer.png"
+  },
+  "graph": {
+    "image": "offset_graph.png",
+    "events": null,
+    "time_axis": "uncalibrated",
+    "offset_scale": "not_digitized"
+  },
+  "warnings": [
+    "OCR output requires review; confidence scores are not calibrated probabilities.",
+    "Graph is an image crop, not reconstructed replay data. No exact event timestamps extracted.",
+    "Accuracy could not be read.",
+    "Unreadable judgment count: marvelous.",
+    "Unreadable judgment count: perfect.",
+    "Unreadable judgment count: great.",
+    "Unreadable judgment count: good.",
+    "Unreadable judgment count: bad.",
+    "Unreadable judgment count: miss.",
+    "Partial extraction: readable fields and graph are retained; unreadable numbers are not filled from the reference."
+  ],
+  "job_id": "5aa39c16-7d24-473f-9601-20e263f50d26",
+  "review_path": "/?job=5aa39c16-7d24-473f-9601-20e263f50d26"
+}

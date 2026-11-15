@@ -1,0 +1,64 @@
+{
+  "mode": "song_debrief",
+  "tier": "A",
+  "question": null,
+  "runs": [
+    {
+      "source": "custom_game_csv",
+      "tier": "A",
+      "song": {
+        "title": "Song 10",
+        "game_id": 1,
+        "song_id": 10,
+        "difficulty": 2,
+        "game_time_ms": 14000,
+        "bpm": 120,
+        "note_count": 25,
+        "score": 1000000,
+        "score_max": 1000000,
+        "native_grade": "Perfect",
+        "scoring_system": "custom_million_point_game_1"
+      },
+      "facts": {
+        "overall": {
+          "accuracy_pct": 100.0,
+          "offset_mean_ms": 26.16,
+          "offset_spread_ms": null,
+          "notes": 25
+        },
+        "sections": [
+          {
+            "start_s": 0,
+            "end_s": 5,
+            "accuracy_pct": 100.0,
+            "offset_mean_ms": 24.333333333333332,
+            "offset_spread_ms": 2.3333333333333335
+          },
+          {
+            "start_s": 5,
+            "end_s": 10,
+            "accuracy_pct": 100.0,
+            "offset_mean_ms": 26.666666666666668,
+            "offset_spread_ms": 5.0
+          },
+          {
+            "start_s": 10,
+            "end_s": 14,
+            "accuracy_pct": 100.0,
+            "offset_mean_ms": 26.8,
+            "offset_spread_ms": 6.333333333333333
+          }
+        ],
+        "weakest_section": {
+          "start_s": 0,
+          "end_s": 5,
+          "accuracy_pct": 100.0
+        },
+        "usable_for_coaching": true,
+        "data_notes": []
+      }
+    }
+  ],
+  "session": null,
+  "history": []
+}

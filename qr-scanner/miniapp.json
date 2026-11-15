@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/@mentra/miniapp-cli/schema/miniapp.schema.json",
+  "packageName": "com.mentra.rhythm_extractor_v16",
+  "version": "1.0.16",
+  "name": "Rhythm Extractor V16",
+  "description": "Extract QR data and Etterna results inside the miniapp.",
+  "icon": "icon.png",
+  "type": "standard",
+  "sdkVersion": "0.3.0",
+  "minHostVersion": "1.42.0",
+  "entry": {
+    "background": "background/index.js",
+    "ui": "ui/index.html"
+  },
+  "permissions": [
+    {
+      "type": "CAMERA",
+      "description": "Capture QR codes and Etterna results."
+    }
+  ],
+  "hardwareRequirements": [
+    {
+      "type": "CAMERA",
+      "level": "REQUIRED"
+    },
+    {
+      "type": "BUTTON",
+      "level": "REQUIRED"
+    }
+  ]
+}

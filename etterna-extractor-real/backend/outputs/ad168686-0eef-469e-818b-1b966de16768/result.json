@@ -1,0 +1,9 @@
+{
+  "status": "needs_better_photo",
+  "source": "screen",
+  "warnings": [
+    "Screen is under 600 pixels wide. Move closer or capture at higher resolution."
+  ],
+  "job_id": "ad168686-0eef-469e-818b-1b966de16768",
+  "review_path": "/?job=ad168686-0eef-469e-818b-1b966de16768"
+}

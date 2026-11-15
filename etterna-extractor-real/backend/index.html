@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Etterna extraction desk</title>
+<style>
+body{font:16px system-ui;margin:0;background:#10121b;color:#e8edf8}main{max-width:1100px;margin:auto;padding:28px}
+h1{margin-bottom:4px}p{line-height:1.5;color:#c0c9dd}section{background:#1a2030;padding:20px;border-radius:12px;margin:18px 0}
+button,input,select{font:inherit}button{padding:10px 15px;background:#8affc1;border:0;border-radius:7px;cursor:pointer;margin:6px 8px 6px 0}
+button:disabled{opacity:.45;cursor:wait}input{max-width:100%}a{color:#8affc1}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}
+canvas{width:100%;height:auto;background:#000;cursor:crosshair;touch-action:manipulation}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.grid img{max-width:100%;border:1px solid #4c5870}label{display:block;margin:12px 0}
+#status{padding:12px;background:#26354b;border-radius:8px}small{color:#c0c9dd}
+</style></head><body><main>
+<h1>Etterna extraction desk</h1><p>Review numeric OCR and isolated panels. Supports the supplied Etterna theme; graph output is an image, not exact replay data.</p>
+<section><input type="file" id="file" accept="image/*">
+<label><input id="screen" type="checkbox"> This file is already a full-screen screenshot (no room or monitor border)</label>
+<button id="upload">Upload and extract</button><button id="refresh">Refresh scans from glasses</button>
+<select id="jobs"><option value="">Select a recent scan</option></select></section>
+<p id="status">Start with a screenshot, then test a glasses photo.</p>
+<section id="review" hidden><h2>Screen alignment</h2><p>If automatic extraction failed, click the four <b>inner screen corners</b> in this order: top-left, top-right, bottom-right, bottom-left. Correct corners apply only to this photo.</p>
+<canvas id="canvas"></canvas><p id="points">0 / 4 corners selected</p>
+<button id="clear">Clear corners</button><button id="rectify" disabled>Straighten and extract again</button>
+<p><a id="original" target="_blank">Open original photo</a> · <a id="json" target="_blank">Download result JSON</a></p></section>
+<section id="panels" hidden><h2>Cropped panels</h2><div id="crops" class="grid"></div></section>
+<section><h2>Extracted data and OCR evidence</h2><pre id="result">No scan selected.</pre></section>
+</main><script>
+let current='', corners=[], photo=new Image(), requestVersion=0;
+const $=id=>document.getElementById(id), canvas=$('canvas'), ctx=canvas.getContext('2d');
+function status(s){$('status').textContent=s}
+async function api(url,options){const r=await fetch(url,options);if(!r.ok)throw Error(await r.text());return r.json()}
+function draw(){canvas.width=photo.naturalWidth;canvas.height=photo.naturalHeight;ctx.drawImage(photo,0,0);ctx.strokeStyle='#8affc1';ctx.lineWidth=Math.max(2,canvas.width/350);ctx.beginPath();corners.forEach((p,i)=>{const x=p[0]*canvas.width,y=p[1]*canvas.height;i?ctx.lineTo(x,y):ctx.moveTo(x,y)});if(corners.length===4)ctx.closePath();ctx.stroke();corners.forEach((p,i)=>{const x=p[0]*canvas.width,y=p[1]*canvas.height;ctx.fillStyle='#8affc1';ctx.beginPath();ctx.arc(x,y,canvas.width/100,0,7);ctx.fill();ctx.font=`bold ${Math.max(18,canvas.width/40)}px system-ui`;ctx.fillText(String(i+1),x+15,y-10)});$('points').textContent=`${corners.length} / 4 corners selected`;$('rectify').disabled=corners.length!==4}
+canvas.onclick=e=>{if(corners.length>=4)return;const r=canvas.getBoundingClientRect();corners.push([(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height]);draw()};
+$('clear').onclick=()=>{corners=[];draw()};
+async function refresh(){const jobs=await api('/api/jobs');$('jobs').replaceChildren(new Option('Select a recent scan',''));for(const j of jobs)$('jobs').add(new Option(j.job_id,j.job_id));$('jobs').value=current}
+async function select(id){current=id;corners=[];$('review').hidden=false;$('panels').hidden=true;$('crops').replaceChildren();$('original').href=`/outputs/${id}/original.jpg`;$('json').href=`/outputs/${id}/result.json`;photo.onload=draw;photo.src=`/outputs/${id}/original.jpg`;history.replaceState(null,'',`?job=${id}`);await poll(id)}
+async function poll(id){const v=++requestVersion;for(let i=0;i<240;i++){if(current!==id||requestVersion!==v)return;const r=await api(`/api/jobs/${id}`);$('result').textContent=JSON.stringify(r,null,2);status(r.status+(r.warnings?.length?' — '+r.warnings.join(' '):''));if(r.status!=='processing'){showCrops(id,r);return}await new Promise(resolve=>setTimeout(resolve,1000))}status('Still processing. Select this scan again to refresh.')}
+function showCrops(id,r){$('crops').replaceChildren();const names={...(r.crops||{})};if(r.crops)names['alignment_overlay']='overlay.png';for(const [label,name]of Object.entries(names)){const item=document.createElement('div'),title=document.createElement('p'),link=document.createElement('a'),img=document.createElement('img');title.textContent=label;link.href=`/outputs/${id}/${name}?v=${Date.now()}`;link.target='_blank';img.src=link.href;img.alt=label;link.append(img);item.append(title,link);$('crops').append(item)}$('panels').hidden=!Object.keys(names).length}
+$('upload').onclick=async()=>{const file=$('file').files[0];if(!file)return status('Choose an image first.');$('upload').disabled=true;try{status('Uploading...');const job=await api('/api/jobs?mode='+($('screen').checked?'screen':'auto'),{method:'POST',headers:{'Content-Type':file.type||'application/octet-stream'},body:file});await refresh();await select(job.job_id)}catch(e){status(e.message)}finally{$('upload').disabled=false}};
+$('rectify').onclick=async()=>{try{$('rectify').disabled=true;await api(`/api/jobs/${current}/corners`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({corners})});await poll(current)}catch(e){status(e.message)}finally{$('rectify').disabled=corners.length!==4}};
+$('refresh').onclick=()=>refresh().catch(e=>status(e.message));$('jobs').onchange=()=>{if($('jobs').value)select($('jobs').value).catch(e=>status(e.message))};
+refresh().then(()=>{const id=new URLSearchParams(location.search).get('job');if(id)return select(id)}).catch(e=>status(e.message));
+</script></body></html>

@@ -1,0 +1,407 @@
+diff --git a/RhythmBackend/Program.cs b/RhythmBackend/Program.cs
+index 6cbed04..8753ca9 100644
+--- a/RhythmBackend/Program.cs
++++ b/RhythmBackend/Program.cs
+@@ -9,6 +9,7 @@ builder.AddSessionApi();
+ var app = builder.Build();
+ app.UseSessionApi();
+ app.MapSessionApi();
++if (app.Environment.IsDevelopment()) app.MapMentraIntegration();
+ 
+ // Test whether the backend is running
+ app.MapGet("/", () =>
+diff --git a/RhythmBackend/Services/CoachGenerationRetry.cs b/RhythmBackend/Services/CoachGenerationRetry.cs
+new file mode 100644
+index 0000000..a209104
+--- /dev/null
++++ b/RhythmBackend/Services/CoachGenerationRetry.cs
+@@ -0,0 +1,40 @@
++namespace RhythmBackend.Services;
++
++/// <summary>One format-repair attempt, inside the caller's shared time budget.</summary>
++public static class CoachGenerationRetry
++{
++    public static async Task<CoachResponse> GenerateAsync(
++        Func<string?, CancellationToken, Task<CoachResponse>> generate,
++        string mode, string? tier, MentraCoachRequest? grounding, CancellationToken token)
++    {
++        string? correction = null;
++        for (int attempt = 0; attempt < 2; attempt++)
++        {
++            token.ThrowIfCancellationRequested();
++            var output = await generate(correction, token);
++            token.ThrowIfCancellationRequested();
++            try
++            {
++                CoachResponseValidator.Validate(output, mode, tier, grounding);
++                return output;
++            }
++            catch (CoachResponseException error) when (error.Code == "coach_speech_rejected" && attempt == 0)
++            {
++                string target = mode switch
++                {
++                    "song_debrief" => "70 to 80 whitespace-separated words",
++                    "session_debrief" => "100 to 120 whitespace-separated words in exactly two paragraphs: session observations, then practice actions",
++                    "chat" => "25 to 60 whitespace-separated words",
++                    _ => throw new InvalidOperationException("Unknown mode")
++                };
++                correction = "Formatting repair: the previous reply failed speech-format validation. " + error.Message + " " +
++                    $"Regenerate the complete response JSON with speech containing {target}. " +
++                    "Use plain prose without URLs, links or square-bracket references. " +
++                    "Preserve the original mode, tier, available measurements and evidence limits. " +
++                    "Do not invent facts or add unsupported claims to meet the length. " +
++                    "Return all required JSON fields and check speech length before responding.";
++            }
++        }
++        throw new InvalidOperationException("Unreachable generation state");
++    }
++}
+diff --git a/RhythmBackend/Services/CoachResponseValidator.cs b/RhythmBackend/Services/CoachResponseValidator.cs
+index 6ad3e31..86992d4 100644
+--- a/RhythmBackend/Services/CoachResponseValidator.cs
++++ b/RhythmBackend/Services/CoachResponseValidator.cs
+@@ -6,7 +6,7 @@ public static class CoachResponseValidator
+ {
+     // Mechanical checks from the supplied package. Semantic grounding still depends
+     // on the system prompt; these checks do not establish scientific evidence.
+-    public static void Validate(CoachResponse output, string mode, string? tier)
++    public static void Validate(CoachResponse output, string mode, string? tier, MentraCoachRequest? grounding = null)
+     {
+         bool valid = output.Mode == mode && output.Tier == tier
+             && output.CoachingFocus is "judgement_quality" or "combo_continuity" or "recovery_after_miss"
+@@ -34,11 +34,25 @@ public static class CoachResponseValidator
+         };
+ 
+         if (words < min || words > max
++            || mode == "session_debrief" && Regex.Split(output.Speech.Trim(), @"\r?\n\s*\r?\n").Length != 2
+             || Regex.IsMatch(output.Speech, @"https?://|\[[^\]]*\]",
+                 RegexOptions.IgnoreCase | RegexOptions.CultureInvariant, TimeSpan.FromSeconds(1)))
+             throw new CoachResponseException("coach_speech_rejected",
+                 "The coach reply did not meet the required length or content rules.");
+ 
++        if (grounding is not null)
++        {
++            bool series = mode == "song_debrief" && tier == "A" && grounding.Runs.Count == 1 && grounding.Runs[0].Facts.UsableForCoaching;
++            bool focusValid = output.FocusSection is null || series && grounding.Runs[0].Facts.Sections.Any(s => s.StartS == output.FocusSection.StartS && s.EndS == output.FocusSection.EndS);
++            bool hasSpread = series && (grounding.Runs[0].Facts.Overall.OffsetSpreadMs is not null || grounding.Runs[0].Facts.Sections.Any(s => s.OffsetSpreadMs is not null));
++            bool unavailable = output.CoachingFocus is "lane_execution" or "combo_continuity" or "recovery_after_miss" or "density_or_difficulty" or "calibration_check";
++            bool noUsableFacts = grounding.Runs.Count > 0 && !grounding.Runs.Any(r => r.Facts.UsableForCoaching);
++            if (!focusValid || unavailable || noUsableFacts && (output.CoachingFocus is not ("none" or "data_quality") || output.Drill is not null || output.NextTarget is not null)
++                || output.CoachingFocus == "timing_spread" && !hasSpread
++                || output.CoachingFocus == "timing_bias" && !grounding.Runs.Any(r => r.Facts.UsableForCoaching && r.Facts.Overall.OffsetMeanMs is not null))
++                throw new CoachResponseException("coach_unsupported_facts", "The reply requires unavailable measurements.");
++            return;
++        }
+         // Neither current endpoint supplies a series or session calibration facts.
+         bool unsupportedForTier = tier != "A" && (output.CoachingFocus is "timing_spread" or "recovery_after_miss" or "density_or_difficulty")
+             || output.CoachingFocus is "calibration_check" && tier == "A";
+diff --git a/RhythmBackend/Services/GeminiService.cs b/RhythmBackend/Services/GeminiService.cs
+index b54b1b9..38b3121 100644
+--- a/RhythmBackend/Services/GeminiService.cs
++++ b/RhythmBackend/Services/GeminiService.cs
+@@ -9,6 +9,7 @@ namespace RhythmBackend.Services;
+ public class GeminiService
+ {
+     private readonly Client _client;
++    private readonly string _model;
+     private readonly string _systemPrompt;
+     private readonly Schema _responseSchema;
+ 
+@@ -18,6 +19,7 @@ public class GeminiService
+             ?? throw new InvalidOperationException("Gemini API key is missing.");
+ 
+         _client = new Client(apiKey: apiKey);
++        _model = configuration["GEMINI_MODEL"] ?? "gemini-3.5-flash-lite";
+         string promptsDirectory = Path.Combine(environment.ContentRootPath, "Prompts");
+         _systemPrompt = File.ReadAllText(Path.Combine(promptsDirectory, "coach-system-prompt.md"));
+         _responseSchema = Schema.FromJson(
+@@ -183,14 +185,22 @@ public class GeminiService
+         return GenerateReplyAsync(payload, "session_debrief", "mixed", cancellationToken);
+     }
+ 
++    public Task<CoachResponse> CoachFactsAsync(MentraCoachRequest request, CancellationToken cancellationToken = default)
++    {
++        request.Validate();
++        return GenerateReplyAsync(request, request.Mode, request.Tier, cancellationToken, request);
++    }
++
+     private async Task<CoachResponse> GenerateReplyAsync(
+-        object payload, string mode, string? tier, CancellationToken cancellationToken)
++        object payload, string mode, string? tier, CancellationToken cancellationToken, MentraCoachRequest? grounding = null)
+     {
+         using var timeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+         timeout.CancelAfter(TimeSpan.FromSeconds(45));
+ 
++        return await CoachGenerationRetry.GenerateAsync(async (correction, attemptToken) =>
++        {
+         var response = await _client.Models.GenerateContentAsync(
+-            model: "gemini-3.5-flash-lite",
++            model: _model,
+             contents: JsonSerializer.Serialize(payload),
+             config: new GenerateContentConfig
+             {
+@@ -203,14 +213,21 @@ public class GeminiService
+                         "Chat without runs may give general practice guidance, but no personal measurements. " +
+                         "Game, song, and difficulty IDs are opaque identifiers. " +
+                         "Use practice_convention for untested coaching suggestions and none for reporting only. " +
+-                        "Do not invent numeric drill durations or targets; use qualitative targets if needed.")]
++                        "Do not invent numeric drill durations or targets; use qualitative targets if needed. " +
++                        "Mentra facts requests can contain reviewed screen_ocr summaries. Use only supplied facts. " +
++                        "Keep scoring systems separate. Null measurements remain unknown. " +
++                        "For facts-only requests, no lane/combo/recovery/density/calibration data has been computed. " +
++                        "When usable_for_coaching is false, report the data issue and give no personal performance drill or target. " +
++                        "Score is not accuracy. Summary CSVs contain no accuracy field. " +
++                        "Session replies must have two paragraphs: observations, then practice. " +
++                        (correction ?? ""))]
+                 },
+                 ResponseMimeType = "application/json",
+                 ResponseSchema = _responseSchema,
+                 Temperature = 0.4,
+                 MaxOutputTokens = 2048
+             },
+-            cancellationToken: timeout.Token);
++            cancellationToken: attemptToken);
+ 
+         var candidate = response.Candidates?.FirstOrDefault();
+         // Reject interrupted responses instead of serving partial JSON.
+@@ -234,7 +251,7 @@ public class GeminiService
+             throw new CoachResponseException("coach_invalid_json", "The coach returned an unreadable reply.");
+         }
+ 
+-        CoachResponseValidator.Validate(output, mode, tier);
+         return output;
++        }, mode, tier, grounding, timeout.Token);
+     }
+ }
+diff --git a/RhythmBackend/Services/MentraCoachRequest.cs b/RhythmBackend/Services/MentraCoachRequest.cs
+new file mode 100644
+index 0000000..a7b58b3
+--- /dev/null
++++ b/RhythmBackend/Services/MentraCoachRequest.cs
+@@ -0,0 +1,102 @@
++using System.Text.Json;
++using System.Text.Json.Serialization;
++
++namespace RhythmBackend.Services;
++
++public sealed record MentraOverall(
++    [property: JsonPropertyName("accuracy_pct")] double? AccuracyPct,
++    [property: JsonPropertyName("offset_mean_ms")] double? OffsetMeanMs,
++    [property: JsonPropertyName("offset_spread_ms")] double? OffsetSpreadMs,
++    [property: JsonPropertyName("notes")] int? Notes);
++
++public sealed record MentraSection
++{
++    [JsonPropertyName("start_s")] public int StartS { get; init; }
++    [JsonPropertyName("end_s")] public int EndS { get; init; }
++    [JsonPropertyName("accuracy_pct")] public double? AccuracyPct { get; init; }
++    [JsonPropertyName("offset_mean_ms")] public double? OffsetMeanMs { get; init; }
++    [JsonPropertyName("offset_spread_ms")] public double? OffsetSpreadMs { get; init; }
++}
++
++public sealed record MentraFacts
++{
++    [JsonPropertyName("overall")] public required MentraOverall Overall { get; init; }
++    [JsonPropertyName("sections")] public List<MentraSection> Sections { get; init; } = [];
++    [JsonPropertyName("weakest_section")] public MentraSection? WeakestSection { get; init; }
++    [JsonPropertyName("usable_for_coaching")] public bool UsableForCoaching { get; init; } = true;
++    [JsonPropertyName("data_notes")] public string[] DataNotes { get; init; } = [];
++}
++
++public sealed record MentraRun
++{
++    [JsonPropertyName("source")] public required string Source { get; init; }
++    [JsonPropertyName("tier")] public required string Tier { get; init; }
++    [JsonPropertyName("song")] public JsonElement Song { get; init; }
++    [JsonPropertyName("facts")] public required MentraFacts Facts { get; init; }
++}
++
++public sealed record MentraTurn(
++    [property: JsonPropertyName("role")] string Role,
++    [property: JsonPropertyName("text")] string Text);
++
++public sealed record MentraCoachRequest
++{
++    [JsonPropertyName("mode")] public required string Mode { get; init; }
++    [JsonPropertyName("tier")] public string? Tier { get; init; }
++    [JsonPropertyName("question")] public string? Question { get; init; }
++    [JsonPropertyName("runs")] public List<MentraRun> Runs { get; init; } = [];
++    [JsonPropertyName("session")] public JsonElement? Session { get; init; }
++    [JsonPropertyName("history")] public List<MentraTurn> History { get; init; } = [];
++
++    public void Validate()
++    {
++        if (Mode is not ("song_debrief" or "session_debrief" or "chat"))
++            throw new ArgumentException("Unknown coaching mode.");
++        if (Runs is null || Runs.Count > 20 || History is null || History.Count > 20)
++            throw new ArgumentException("At most 20 recent runs and chat turns are accepted.");
++        if (Mode == "song_debrief" && Runs.Count != 1)
++            throw new ArgumentException("Song coaching requires exactly one run.");
++        if (Mode == "session_debrief" && (Runs.Count == 0 || Session is null))
++            throw new ArgumentException("Session coaching requires computed session facts.");
++        if (Mode == "chat" && (string.IsNullOrWhiteSpace(Question) || Question.Length > 2000))
++            throw new ArgumentException("Chat requires a message of at most 2000 characters.");
++        if (History.Any(t => t is null || t.Role is not ("user" or "assistant") || string.IsNullOrWhiteSpace(t.Text) || t.Text.Length > 2000))
++            throw new ArgumentException("Invalid chat history.");
++        foreach (var run in Runs)
++        {
++            if (run is null || run.Source is not ("custom_game_csv" or "custom_game_summary" or "screen_ocr")
++                || run.Tier is not ("A" or "B") || run.Facts is null || run.Facts.Overall is null
++                || run.Facts.Sections is null || run.Facts.Sections.Count > 1000
++                || run.Facts.DataNotes is null || run.Facts.DataNotes.Any(s => s is null || s.Length > 2000))
++                throw new ArgumentException("Invalid run evidence.");
++            if (run.Song.ValueKind != JsonValueKind.Object || run.Song.GetRawText().Length > 5000)
++                throw new ArgumentException("Run song metadata must be an object.");
++            var overall = run.Facts.Overall;
++            Percent(overall.AccuracyPct); Finite(overall.OffsetMeanMs); Spread(overall.OffsetSpreadMs);
++            if (overall.Notes < 0) throw new ArgumentException("Note count cannot be negative.");
++            if (run.Tier == "B" && run.Facts.Sections.Count != 0)
++                throw new ArgumentException("Summary-only runs cannot provide a per-second section series.");
++            if (run.Tier == "A" && (run.Source != "custom_game_csv" || run.Facts.Sections.Count == 0))
++                throw new ArgumentException("Tier A requires custom-game CSV sections.");
++            int end = 0;
++            foreach (var section in run.Facts.Sections)
++            {
++                if (section is null || section.StartS < end || section.EndS <= section.StartS)
++                    throw new ArgumentException("Sections must have ordered, non-overlapping time windows.");
++                Percent(section.AccuracyPct); Finite(section.OffsetMeanMs); Spread(section.OffsetSpreadMs);
++                end = section.EndS;
++            }
++            if (run.Facts.WeakestSection is { } weak)
++            {
++                if (weak.StartS < 0 || weak.EndS <= weak.StartS) throw new ArgumentException("Invalid weakest section.");
++                Percent(weak.AccuracyPct);
++            }
++        }
++        string? expected = Runs.Count == 0 ? null : Runs.Select(r => r.Tier).Distinct().Count() == 1 ? Runs[0].Tier : "mixed";
++        if (Tier != expected) throw new ArgumentException("Root tier does not match the supplied runs.");
++    }
++
++    private static void Finite(double? v) { if (v.HasValue && !double.IsFinite(v.Value)) throw new ArgumentException("Measurements must be finite or null."); }
++    private static void Percent(double? v) { Finite(v); if (v is < 0 or > 100) throw new ArgumentException("Accuracy must use 0 to 100 percent."); }
++    private static void Spread(double? v) { Finite(v); if (v < 0) throw new ArgumentException("Spread cannot be negative."); }
++}
+diff --git a/RhythmBackend/Services/MentraEndpoints.cs b/RhythmBackend/Services/MentraEndpoints.cs
+new file mode 100644
+index 0000000..4adec64
+--- /dev/null
++++ b/RhythmBackend/Services/MentraEndpoints.cs
+@@ -0,0 +1,28 @@
++namespace RhythmBackend.Services;
++
++public static class MentraEndpoints
++{
++    public static void MapMentraIntegration(this WebApplication app)
++    {
++        app.MapGet("/api/mentra/health", (IConfiguration config) => Results.Ok(new {
++            service = "RhythmBackend", mentra_contract = 1, speech_format_retries = 1,
++            gemini_configured = !string.IsNullOrWhiteSpace(config["GEMINI_API_KEY"])
++        }));
++        app.MapPost("/api/mentra/coach", async (MentraCoachRequest request, IServiceProvider services,
++            IConfiguration config, CancellationToken token) => {
++            try { request.Validate(); }
++            catch (ArgumentException error) { return Results.BadRequest(new { error = error.Message }); }
++            if (string.IsNullOrWhiteSpace(config["GEMINI_API_KEY"]))
++                return Results.Problem("Configure GEMINI_API_KEY on RhythmBackend to enable AI coaching.", statusCode: 503);
++            try {
++                var gemini = services.GetRequiredService<GeminiService>();
++                var coach = await gemini.CoachFactsAsync(request, token);
++                return Results.Ok(new { provider = "rhythm_backend", coach });
++            }
++            catch (OperationCanceledException) { return Results.Problem("Coaching request timed out or was cancelled.", statusCode: 504); }
++            catch (CoachResponseException error) { app.Logger.LogWarning("Mentra coach reply rejected: {Code}; {Diagnostic}", error.Code, error.Code == "coach_speech_rejected" ? error.Message : "Response validation failed"); return Results.Problem(error.Message, statusCode: 502,
++                extensions: new Dictionary<string, object?> { ["errorCode"] = error.Code }); }
++            catch (Exception error) { app.Logger.LogWarning("Mentra coaching failed ({Type}); inspect model configuration and provider availability.", error.GetType().Name); return Results.Problem("Unable to generate AI coaching.", statusCode: 502); }
++        });
++    }
++}
+diff --git a/RhythmBackend/Sessions/SessionEndpoints.cs b/RhythmBackend/Sessions/SessionEndpoints.cs
+index 0ce7e50..abe730a 100644
+--- a/RhythmBackend/Sessions/SessionEndpoints.cs
++++ b/RhythmBackend/Sessions/SessionEndpoints.cs
+@@ -176,7 +176,7 @@ public static class SessionEndpoints
+         });
+ 
+         routes.MapPost("/sessions/{session_id}/runs/{run_id}/coach", async (
+-            HttpContext ctx, SessionService service, GeminiService gemini, string session_id, string run_id) =>
++            HttpContext ctx, SessionService service, IServiceProvider services, IConfiguration config, string session_id, string run_id) =>
+         {
+             try
+             {
+@@ -186,8 +186,12 @@ public static class SessionEndpoints
+                     ?? throw new SessionApiException(404, "run_not_found", "Completed attempt was not found.");
+                 var series = await service.DownloadAsync(session_id, run_id, "series.csv", Bearer(ctx), ctx.RequestAborted);
+                 var summary = await service.DownloadAsync(session_id, run_id, "summary.csv", Bearer(ctx), ctx.RequestAborted);
++                if (run.Autoplay || run.SummaryExceedsFormatRange) return Error(422, "not_player_data", "Player coaching is unavailable for this attempt.");
++                if (string.IsNullOrWhiteSpace(config["GEMINI_API_KEY"])) return Error(503, "coach_not_configured", "Configure Gemini on this service.");
++                var gemini = services.GetRequiredService<GeminiService>();
+                 var coaching = await gemini.CoachCsvAsync(run,
+                     Encoding.UTF8.GetString(series), Encoding.UTF8.GetString(summary), ctx.RequestAborted);
++                await service.ReadAsync(session_id, Bearer(ctx), upload: false, ctx.RequestAborted);
+                 return Json(new { session_id, run_id, coaching });
+             }
+             catch (CoachResponseException ex)
+@@ -197,18 +201,22 @@ public static class SessionEndpoints
+         });
+ 
+         routes.MapPost("/sessions/{session_id}/coach", async (
+-            HttpContext ctx, SessionService service, GeminiService gemini, string session_id) =>
++            HttpContext ctx, SessionService service, IServiceProvider services, IConfiguration config, string session_id) =>
+         {
+             try
+             {
+                 var state = await service.ReadAsync(session_id, Bearer(ctx), upload: false, ctx.RequestAborted);
+                 var runs = new List<(RunManifest Run, string SummaryCsv)>();
+-                foreach (var run in state.Runs.OrderBy(run => run.Sequence))
++                foreach (var run in state.Runs.Where(run => !run.Autoplay && !run.SummaryExceedsFormatRange).OrderBy(run => run.Sequence))
+                 {
+                     var summary = await service.DownloadAsync(session_id, run.RunId, "summary.csv", Bearer(ctx), ctx.RequestAborted);
+                     runs.Add((run, Encoding.UTF8.GetString(summary)));
+                 }
++                if (runs.Count == 0) return Error(422, "no_player_results", "No eligible completed player attempts are available.");
++                if (string.IsNullOrWhiteSpace(config["GEMINI_API_KEY"])) return Error(503, "coach_not_configured", "Configure Gemini on this service.");
++                var gemini = services.GetRequiredService<GeminiService>();
+                 var coaching = await gemini.CoachSessionAsync(runs, ctx.RequestAborted);
++                await service.ReadAsync(session_id, Bearer(ctx), upload: false, ctx.RequestAborted);
+                 return Json(new { session_id, coaching });
+             }
+             catch (CoachResponseException ex)
+diff --git a/RhythmBackend/tests/CoachContractChecks/CoachContractChecks.csproj b/RhythmBackend/tests/CoachContractChecks/CoachContractChecks.csproj
+index 684c130..38f416b 100644
+--- a/RhythmBackend/tests/CoachContractChecks/CoachContractChecks.csproj
++++ b/RhythmBackend/tests/CoachContractChecks/CoachContractChecks.csproj
+@@ -8,5 +8,7 @@
+   <ItemGroup>
+     <Compile Include="..\..\Services\CoachResponse.cs" Link="CoachResponse.cs" />
+     <Compile Include="..\..\Services\CoachResponseValidator.cs" Link="CoachResponseValidator.cs" />
++    <Compile Include="..\..\Services\MentraCoachRequest.cs" Link="MentraCoachRequest.cs" />
++    <Compile Include="..\..\Services\CoachGenerationRetry.cs" Link="CoachGenerationRetry.cs" />
+   </ItemGroup>
+ </Project>
+diff --git a/RhythmBackend/tests/CoachContractChecks/Program.cs b/RhythmBackend/tests/CoachContractChecks/Program.cs
+index 8049eb9..1e3ef8d 100644
+--- a/RhythmBackend/tests/CoachContractChecks/Program.cs
++++ b/RhythmBackend/tests/CoachContractChecks/Program.cs
+@@ -87,4 +87,22 @@ checks++;
+ try { JsonSerializer.Deserialize<CoachResponse>("{}"); throw new Exception("Missing required fields were accepted."); }
+ catch (JsonException) { checks++; }
+ 
++// Current handoff observations/evidence and mixed session mode.
++var mixed = valid with { Mode="session_debrief",Tier="mixed",CoachingFocus="progression",EvidenceBasis="cross_run_pattern",
++    Speech=string.Join(' ',Enumerable.Repeat("measured",35))+"\n\n"+string.Join(' ',Enumerable.Repeat("practice",35)) };
++CoachResponseValidator.Validate(mixed,"session_debrief","mixed");checks++;
++if (!json.Contains("what_went_well") || !json.Contains("observations")) throw new Exception("New schema fields missing");checks++;
++int attempts=0;
++var repaired=await CoachGenerationRetry.GenerateAsync((correction,token)=>{
++    attempts++;
++    return Task.FromResult(attempts==1?valid with {Speech="Too short."}:valid);
++},"song_debrief","B",null,CancellationToken.None);
++if(attempts!=2 || repaired.Speech!=valid.Speech)throw new Exception("Format repair failed");checks++;
++try{CoachResponseValidator.Validate(mixed with {Speech=mixed.Speech.Replace("\n\n"," ")},"session_debrief","mixed");throw new Exception("One-paragraph session accepted");}
++catch(CoachResponseException ex) when(ex.Code=="coach_speech_rejected"){checks++;}
++
++var unusable = new MentraCoachRequest { Mode="song_debrief",Tier="B",Runs=[new MentraRun {Source="screen_ocr",Tier="B",Song=JsonSerializer.SerializeToElement(new {title="screen"}),Facts=new MentraFacts {Overall=new MentraOverall(null,null,null,null),UsableForCoaching=false}}]};
++try{CoachResponseValidator.Validate(valid,"song_debrief","B",unusable);throw new Exception("Unusable facts accepted performance claims");}
++catch(CoachResponseException ex) when(ex.Code=="coach_unsupported_facts"){checks++;}
++
+ Console.WriteLine($"Passed {checks} coaching contract checks.");

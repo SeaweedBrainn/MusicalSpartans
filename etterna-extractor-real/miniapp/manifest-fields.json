@@ -1,0 +1,9 @@
+{
+  "permissions": [
+    { "type": "CAMERA", "description": "Read QR codes and Etterna results." }
+  ],
+  "hardwareRequirements": [
+    { "type": "CAMERA", "level": "REQUIRED" },
+    { "type": "BUTTON", "level": "REQUIRED" }
+  ]
+}

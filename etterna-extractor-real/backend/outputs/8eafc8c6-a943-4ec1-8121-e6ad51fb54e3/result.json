@@ -1,0 +1,443 @@
+{
+  "status": "run_analyzed",
+  "source": "game_csv",
+  "game_run": {
+    "session_id": "a598c009d801402a86a9c0f224682d4a",
+    "sequence": 3,
+    "run_id": "a598c009d801402a86a9c0f224682d4a-3c9fb4a58cd44e5a98b30af9b728bc6d",
+    "created_at": "2026-11-15T14:24:59.4267268Z",
+    "run": {
+      "format_version": 2,
+      "notes": [
+        {
+          "note_index": 0,
+          "time_ms": 2000,
+          "lane": 0,
+          "judgement": "P",
+          "accuracy_delta": 100.0,
+          "latency_ms": -42,
+          "nps": 1,
+          "bpm": 120.0,
+          "combo": 1,
+          "std_ms": null
+        },
+        {
+          "note_index": 1,
+          "time_ms": 2500,
+          "lane": 1,
+          "judgement": "G",
+          "accuracy_delta": -20.0,
+          "latency_ms": -59,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 2,
+          "std_ms": 8.5
+        },
+        {
+          "note_index": 2,
+          "time_ms": 3000,
+          "lane": 2,
+          "judgement": "P",
+          "accuracy_delta": 6.667,
+          "latency_ms": -34,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 3,
+          "std_ms": 10.4
+        },
+        {
+          "note_index": 3,
+          "time_ms": 3500,
+          "lane": 3,
+          "judgement": "P",
+          "accuracy_delta": 3.333,
+          "latency_ms": -2,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 4,
+          "std_ms": 20.7
+        },
+        {
+          "note_index": 4,
+          "time_ms": 4000,
+          "lane": 0,
+          "judgement": "P",
+          "accuracy_delta": 2.0,
+          "latency_ms": -9,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 5,
+          "std_ms": 21.1
+        },
+        {
+          "note_index": 5,
+          "time_ms": 4500,
+          "lane": 3,
+          "judgement": "P",
+          "accuracy_delta": 1.333,
+          "latency_ms": -10,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 6,
+          "std_ms": 20.5
+        },
+        {
+          "note_index": 6,
+          "time_ms": 5500,
+          "lane": 1,
+          "judgement": "P",
+          "accuracy_delta": 0.952,
+          "latency_ms": -9,
+          "nps": 1,
+          "bpm": 120.0,
+          "combo": 7,
+          "std_ms": 19.9
+        },
+        {
+          "note_index": 7,
+          "time_ms": 6000,
+          "lane": 2,
+          "judgement": "P",
+          "accuracy_delta": 0.714,
+          "latency_ms": 7,
+          "nps": 3,
+          "bpm": 120.0,
+          "combo": 8,
+          "std_ms": 21.2
+        },
+        {
+          "note_index": 8,
+          "time_ms": 6250,
+          "lane": 1,
+          "judgement": "M",
+          "accuracy_delta": -10.556,
+          "latency_ms": 115,
+          "nps": 3,
+          "bpm": 120.0,
+          "combo": 0,
+          "std_ms": 21.2
+        },
+        {
+          "note_index": 9,
+          "time_ms": 6500,
+          "lane": 2,
+          "judgement": "M",
+          "accuracy_delta": -8.444,
+          "latency_ms": null,
+          "nps": 3,
+          "bpm": 120.0,
+          "combo": 0,
+          "std_ms": 21.2
+        },
+        {
+          "note_index": 10,
+          "time_ms": 7000,
+          "lane": 0,
+          "judgement": "G",
+          "accuracy_delta": -1.455,
+          "latency_ms": 74,
+          "nps": 3,
+          "bpm": 120.0,
+          "combo": 1,
+          "std_ms": 35.6
+        },
+        {
+          "note_index": 11,
+          "time_ms": 7000,
+          "lane": 3,
+          "judgement": "G",
+          "accuracy_delta": -1.212,
+          "latency_ms": 65,
+          "nps": 3,
+          "bpm": 120.0,
+          "combo": 2,
+          "std_ms": 40.5
+        },
+        {
+          "note_index": 12,
+          "time_ms": 8000,
+          "lane": 1,
+          "judgement": "P",
+          "accuracy_delta": 2.051,
+          "latency_ms": -26,
+          "nps": 1,
+          "bpm": 120.0,
+          "combo": 3,
+          "std_ms": 39.2
+        },
+        {
+          "note_index": 13,
+          "time_ms": 8500,
+          "lane": 2,
+          "judgement": "G",
+          "accuracy_delta": -1.099,
+          "latency_ms": -51,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 4,
+          "std_ms": 39.7
+        },
+        {
+          "note_index": 14,
+          "time_ms": 9000,
+          "lane": 3,
+          "judgement": "P",
+          "accuracy_delta": 1.714,
+          "latency_ms": 15,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 5,
+          "std_ms": 38.6
+        },
+        {
+          "note_index": 15,
+          "time_ms": 10000,
+          "lane": 0,
+          "judgement": "P",
+          "accuracy_delta": 1.5,
+          "latency_ms": -18,
+          "nps": 2,
+          "bpm": 120.0,
+          "combo": 6,
+          "std_ms": 37.4
+        },
+        {
+          "note_index": 16,
+          "time_ms": 10250,
+          "lane": 1,
+          "judgement": "M",
+          "accuracy_delta": -4.559,
+          "latency_ms": null,
+          "nps": 3,
+          "bpm": 120.0,
+          "combo": 0,
+          "std_ms": 37.4
+        },
+        {
+          "note_index": 17,
+          "time_ms": 10500,
+          "lane": 2,
+          "judgement": "M",
+          "accuracy_delta": -4.052,
+          "latency_ms": 107,
+          "nps": 4,
+          "bpm": 120.0,
+          "combo": 0,
+          "std_ms": 37.4
+        },
+        {
+          "note_index": 18,
+          "time_ms": 10750,
+          "lane": 3,
+          "judgement": "P",
+          "accuracy_delta": 1.637,
+          "latency_ms": -26,
+          "nps": 4,
+          "bpm": 120.0,
+          "combo": 1,
+          "std_ms": 36.4
+        },
+        {
+          "note_index": 19,
+          "time_ms": 11000,
+          "lane": 0,
+          "judgement": "M",
+          "accuracy_delta": -3.526,
+          "latency_ms": 132,
+          "nps": 4,
+          "bpm": 120.0,
+          "combo": 0,
+          "std_ms": 36.4
+        },
+        {
+          "note_index": 20,
+          "time_ms": 11250,
+          "lane": 1,
+          "judgement": "P",
+          "accuracy_delta": 1.571,
+          "latency_ms": 15,
+          "nps": 4,
+          "bpm": 120.0,
+          "combo": 1,
+          "std_ms": 35.7
+        },
+        {
+          "note_index": 21,
+          "time_ms": 11500,
+          "lane": 2,
+          "judgement": "M",
+          "accuracy_delta": -3.117,
+          "latency_ms": null,
+          "nps": 4,
+          "bpm": 120.0,
+          "combo": 0,
+          "std_ms": 35.7
+        },
+        {
+          "note_index": 22,
+          "time_ms": 11750,
+          "lane": 3,
+          "judgement": "M",
+          "accuracy_delta": -2.846,
+          "latency_ms": null,
+          "nps": 5,
+          "bpm": 120.0,
+          "combo": 0,
+          "std_ms": 35.7
+        },
+        {
+          "note_index": 23,
+          "time_ms": 12000,
+          "lane": 0,
+          "judgement": "P",
+          "accuracy_delta": 1.558,
+          "latency_ms": 6,
+          "nps": 4,
+          "bpm": 120.0,
+          "combo": 1,
+          "std_ms": 34.8
+        },
+        {
+          "note_index": 24,
+          "time_ms": 12000,
+          "lane": 3,
+          "judgement": "P",
+          "accuracy_delta": 1.433,
+          "latency_ms": -1,
+          "nps": 4,
+          "bpm": 120.0,
+          "combo": 2,
+          "std_ms": 33.8
+        }
+      ],
+      "nominal_bpm": 120.0,
+      "summary": {
+        "game_id": 1,
+        "song_id": 10,
+        "difficulty": 2,
+        "game_time_ms": 14000,
+        "bpm": 120,
+        "total_notes": 25,
+        "score": 656000,
+        "average_latency_ms": -6.0
+      },
+      "chart_id": 1,
+      "samples": [],
+      "timeline_available": true,
+      "sample_interval_sec": null,
+      "video_uri": null,
+      "video_offset_ms": null,
+      "warnings": [
+        "Score is separate from accuracy. V2 accuracy is only an approximate sum of rounded deltas from a zero baseline; partial captures may omit changes. No grade is inferred.",
+        "V2 notes remain note-level; NPS is density and is never summed as a note count."
+      ],
+      "envelope": {
+        "game_id": 1,
+        "song_id": 10,
+        "chart_id": 1,
+        "autoplay": false,
+        "successful_hit_count": 18,
+        "latency_basis": "successful_hits_only_v1",
+        "summary_exceeds_format_range": false,
+        "sample_interval_sec": 1
+      }
+    },
+    "analysis": {
+      "score": 656000,
+      "accuracy": 0.6559699999999999,
+      "accuracy_is_approximate": true,
+      "accuracy_basis": "sum_of_rounded_v2_deltas_zero_baseline",
+      "accuracy_coverage_uncertain": false,
+      "grade": null,
+      "mean_offset_ms": -5.833333333333333,
+      "spread_ms": 33.80376376151692,
+      "sections": [
+        {
+          "start_ms": 0,
+          "end_ms": 5000,
+          "accuracy": null,
+          "mean_offset_ms": -26.0,
+          "spread_ms": 20.534523775015252,
+          "judged_notes": 6,
+          "misses": 0,
+          "perfect": 5,
+          "good": 1,
+          "hit_rate": 1.0,
+          "measured_offsets": 6
+        },
+        {
+          "start_ms": 5000,
+          "end_ms": 10000,
+          "accuracy": null,
+          "mean_offset_ms": 10.714285714285714,
+          "spread_ms": 42.30742685802268,
+          "judged_notes": 9,
+          "misses": 2,
+          "perfect": 4,
+          "good": 3,
+          "hit_rate": 0.7777777777777778,
+          "measured_offsets": 7
+        },
+        {
+          "start_ms": 10000,
+          "end_ms": 15000,
+          "accuracy": null,
+          "mean_offset_ms": -4.8,
+          "spread_ms": 15.14463601411404,
+          "judged_notes": 10,
+          "misses": 5,
+          "perfect": 5,
+          "good": 0,
+          "hit_rate": 0.5,
+          "measured_offsets": 5
+        }
+      ],
+      "tips": [],
+      "spoken_summary": "Game score 656000. Approximately 65.6 percent accuracy from captured judgements. Review the note-level result in the app.",
+      "method": "note_level_v2",
+      "judgments": {
+        "P": 14,
+        "G": 4,
+        "M": 7
+      }
+    }
+  },
+  "remote_session": {
+    "handle": "4160a568b3d542ea81d096c1346e6dba",
+    "runs": [
+      {
+        "run_id": "d04a759eae4e46ec86172af4156dc22c",
+        "sequence": 1,
+        "game_id": 1,
+        "song_id": 10,
+        "autoplay": false
+      },
+      {
+        "run_id": "7dc1d33a984e4e59aa654a69f0cbcc8c",
+        "sequence": 2,
+        "game_id": 1,
+        "song_id": 102,
+        "autoplay": false
+      },
+      {
+        "run_id": "3c9fb4a58cd44e5a98b30af9b728bc6d",
+        "sequence": 3,
+        "game_id": 1,
+        "song_id": 10,
+        "autoplay": false
+      }
+    ],
+    "run_count": 3,
+    "downloaded_count": 3,
+    "next_after_sequence": 3,
+    "selected_run_id": "3c9fb4a58cd44e5a98b30af9b728bc6d"
+  },
+  "warnings": [
+    "Score is separate from accuracy. V2 accuracy is only an approximate sum of rounded deltas from a zero baseline; partial captures may omit changes. No grade is inferred.",
+    "V2 notes remain note-level; NPS is density and is never summed as a note count."
+  ],
+  "crops": {},
+  "qr_decoder": "zxing-cpp",
+  "job_id": "8eafc8c6-a943-4ec1-8121-e6ad51fb54e3",
+  "review_path": "/?job=8eafc8c6-a943-4ec1-8121-e6ad51fb54e3"
+}
